@@ -31,5 +31,5 @@ action "Get Changed Files" {
 action "Print env" {
   uses = "actions/bin/sh@master"
   needs = ["Get Changed Files"]
-  args = "env"
+  args = "find $HOME -name \"*.json\" -print -exec cat {} \\;"
 }
