@@ -111,85 +111,85 @@ string') {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-if (true) {
+if ( true ) {
     return 1;
-} elseif (false) {
+} elseif ( false ) {
     return 2;
-} elseif (null) {
+} elseif ( null ) {
     return 3;
 } else {
     return;
 }
 
-if (true) {
+if ( true ) {
     return 1;
 }
 
-if (true):
+if ( true ):
     return 1;
-elseif (false):
+elseif ( false ):
     return 2;
 else:
     return;
 endif;
 
-if (true):
+if ( true ):
     return 1;
 endif;
 
-if (true) {
+if ( true ) {
     return 1;
-} elseif (false) {
+} elseif ( false ) {
     return 2;
-} elseif (null) {
+} elseif ( null ) {
     return 3;
 } else {
     return;
 }
 
-if (true) {
+if ( true ) {
     return 1;
-} elseif (false) {
+} elseif ( false ) {
     return 2;
-} elseif (null) {
+} elseif ( null ) {
     return 3;
 }
 
 if (
     reallyReallyReallyLongFunction() &&
     $this->reallyreallyreallyreallyLongMethodName()
-) {
+ ) {
     return true;
 }
 
 if (
     $this ||
-    ($that && $theOtherThing && $someReallyReallyReallyLongBooleanVariable)
-) {
+    ( $that && $theOtherThing && $someReallyReallyReallyLongBooleanVariable )
+ ) {
     return true;
 }
 
 if (
     $this ||
-    ($that && $theOtherThing < $someReallyReallyReallyLongBooleanVariable)
-) {
+    ( $that && $theOtherThing < $someReallyReallyReallyLongBooleanVariable )
+ ) {
     return true;
 }
 
 if (
     $this ||
-    ($that &&
+    ( $that &&
         $theOtherThing < $someReallyReallyReallyLongBooleanVariable ==
-            $equalCheck)
-) {
+            $equalCheck )
+ ) {
     return true;
 }
 
 if (
     $this ||
-    ($that && $theOtherThing) ||
+    ( $that && $theOtherThing ) ||
     $someReallyReallyReallyLongBooleanVariable
-) {
+ ) {
     return true;
 }
 
@@ -198,46 +198,46 @@ if (
     $that ||
     $theOtherThing ||
     $someReallyReallyReallyLongBooleanVariable
-) {
+ ) {
     return true;
 }
 
 if (
-    ($this || $that) &&
+    ( $this || $that ) &&
     $theOtherThing < $someReallyReallyReallyLongBooleanVariable == $equalCheck
-) {
+ ) {
     return true;
 }
 
-if (true):
-elseif (false):
+if ( true ):
+elseif ( false ):
 else:
 endif;
 
-if (true) {
-} elseif (false) {
-} elseif (null) {
+if ( true ) {
+} elseif ( false ) {
+} elseif ( null ) {
 } else {
 }
 
 if (
     $showNoticeValue === '1' &&
-    !is_null($currentService) &&
+    !is_null( $currentService ) &&
     $currentService->getServiceId() === $activation->getServiceId()
-) {
+ ) {
     $test = 1;
 }
 
 if (
     $showNoticeValue === '1' &&
-    !is_null($currentService) &&
+    !is_null( $currentService ) &&
     $currentService->getServiceIdWithReallyReallyReallyLongName() ===
         $activation->getServiceId()
-) {
+ ) {
     $test = 1;
 }
 
-if (true) {
+if ( true ) {
     return 1;
 } else {
     return 3;
@@ -248,7 +248,7 @@ if (
     'string
 string
 string'
-) {
+ ) {
     $var = 'string
     string
     string

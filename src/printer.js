@@ -82,13 +82,13 @@ function genericPrint(path, options, print) {
   const needsParens = pathNeedsParens(path, options);
 
   if (needsParens) {
-    parts.unshift("(");
+    parts.unshift("( ");
   }
 
   parts.push(printedWithoutParens);
 
   if (needsParens) {
-    parts.push(")");
+    parts.push(" )");
   }
 
   if (lineShouldEndWithSemicolon(path)) {
@@ -408,10 +408,10 @@ function printMemberChain(path, options, print) {
       // and print accordingl y
       if (printedGroup[i + 1] && printedGroup[i + 1].needsParens) {
         result.push(
-          "(",
+          "( ",
           printedGroup[i].printed,
           printedGroup[i + 1].printed,
-          ")"
+          " )"
         );
         i++;
       } else {
@@ -628,21 +628,21 @@ function printArgumentsList(path, options, print, argumentsKey = "arguments") {
         [
           concat([
             ifBreak(
-              indent(concat(["(", softline, concat(printedExpanded)])),
-              concat(["(", concat(printedExpanded)])
+              indent(concat(["( ", softline, concat(printedExpanded)])),
+              concat(["( ", concat(printedExpanded)])
             ),
-            somePrintedArgumentsWillBreak ? softline : "",
+            somePrintedArgumentsWillBreak ? softline : " ",
             ")"
           ]),
           shouldGroupFirst
             ? concat([
-                "(",
+                "( ",
                 group(printedExpanded[0], { shouldBreak: true }),
                 concat(printedExpanded.slice(1)),
                 ")"
               ])
             : concat([
-                "(",
+                "( ",
                 concat(printedArguments.slice(0, -1)),
                 group(getLast(printedExpanded), {
                   shouldBreak: true
@@ -651,10 +651,10 @@ function printArgumentsList(path, options, print, argumentsKey = "arguments") {
               ]),
           group(
             concat([
-              "(",
+              "( ",
               indent(concat([line, concat(printedArguments)])),
               line,
-              ")"
+              " )"
             ]),
             { shouldBreak: true }
           )
@@ -666,10 +666,10 @@ function printArgumentsList(path, options, print, argumentsKey = "arguments") {
 
   return group(
     concat([
-      "(",
+      "( ",
       indent(concat([softline, concat(printedArguments)])),
       softline,
-      ")"
+      printedArguments.some(willBreak) || anyArgEmptyLine ? ")" : " )"
     ]),
     {
       shouldBreak: printedArguments.some(willBreak) || anyArgEmptyLine
@@ -1486,7 +1486,7 @@ function printNode(path, options, print) {
         ]);
       }
 
-      return concat(["declare(", printDeclareArguments(path), ");"]);
+      return concat(["declare( ", printDeclareArguments(path), " );"]);
     }
     case "namespace":
       return concat([
@@ -1666,14 +1666,14 @@ function printNode(path, options, print) {
       const body = printBodyControlStructure(path, options, print, "body");
       const opening = group(
         concat([
-          "if (",
+          "if ( ",
           group(
             concat([
               indent(concat([softline, path.call(print, "test")])),
               softline
             ])
           ),
-          ")",
+          " )",
           body
         ])
       );
@@ -2226,9 +2226,10 @@ function printNode(path, options, print) {
     }
     case "list":
     case "array": {
-      const open = node.shortForm ? "[" : concat([node.kind, "("]);
-      const close = node.shortForm ? "]" : ")";
-      const index = node.kind === "array" ? "items" : "arguments";
+      const index     = node.kind === "array" ? "items" : "arguments";
+      const has_items = node[index].length > 0;
+      const open      = node.shortForm ? "[" : concat([node.kind, has_items ? "( " : "("]);
+      const close     = node.shortForm ? "]" : ")";
 
       if (node[index].length === 0) {
         if (!hasDanglingComments(node)) {
@@ -2286,6 +2287,7 @@ function printNode(path, options, print) {
           ),
           comments.printDanglingComments(path, options, true),
           softline,
+          ifBreak("", node.shortForm ? "" : " "),
           close
         ]),
         { shouldBreak }

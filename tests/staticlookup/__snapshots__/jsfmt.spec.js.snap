@@ -137,7 +137,7 @@ Foo::aStaticMethod();
 $classname = 'Foo';
 $classname::aStaticMethod();
 print $classname::$my_static . "\\n";
-Foo::method([
+Foo::method( [
     'foo' => 'bar',
     'bar' => 'foo',
     'foobar' => 'barfoo',
@@ -171,9 +171,9 @@ abstract class DataRecord
     private static $db; // MySQLi-Connection, same for all subclasses
     private static $table = array(); // Array of tables for subclasses
 
-    public static function init($classname, $table, $db = false)
+    public static function init( $classname, $table, $db = false )
     {
-        if (!($db === false)) {
+        if ( !( $db === false ) ) {
             self::$db = $db;
         }
         self::$table[$classname] = $table;
@@ -183,7 +183,7 @@ abstract class DataRecord
     {
         return self::$db;
     }
-    public static function getTable($classname)
+    public static function getTable( $classname )
     {
         return self::$table[$classname];
     }
@@ -213,7 +213,7 @@ abstract class Singleton
      */
     final public static function getInstance()
     {
-        if (null !== static::$_instance) {
+        if ( null !== static::$_instance ) {
             return static::$_instance;
         }
         static::$_instance = new static();
@@ -255,7 +255,9 @@ class Foo
     }
 }
 
-$var = $this->modelClass::where('name', 'like', strtoupper("%\${key}%"))->get();
+$var = $this->modelClass
+    ::where( 'name', 'like', strtoupper( "%\${key}%" ) )
+    ->get();
 
 MyVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongClass::class;
 

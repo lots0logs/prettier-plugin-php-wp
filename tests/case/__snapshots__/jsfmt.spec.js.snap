@@ -241,7 +241,7 @@ FINAL CLASS MyClass EXTENDS Bar IMPLEMENTS iTemplate
 __HALT_COMPILER();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare(ticks=1);
+declare( ticks=1 );
 
 namespace Vendor\\Package;
 
@@ -255,7 +255,7 @@ interface iTemplate
 abstract class AbstractClass
 {
     abstract protected function getValue();
-    abstract protected function prefixValue($prefix);
+    abstract protected function prefixValue( $prefix );
 
     public function printOut()
     {
@@ -305,11 +305,11 @@ final class MyClass extends Bar implements iTemplate
         $other_null = null;
         $null_string = "NULL";
 
-        if ($expr1) {
+        if ( $expr1 ) {
             // IF body
-        } elseif ($expr2) {
+        } elseif ( $expr2 ) {
             // ELSEIF body
-        } elseif ($expr3) {
+        } elseif ( $expr3 ) {
             // ELSE IF body
         } else {
             // Else body
@@ -328,12 +328,12 @@ final class MyClass extends Bar implements iTemplate
                 break;
         }
 
-        while (list($key, $value) = foo($arr)) {
-            if (!($key % 2)) {
+        while (list( $key, $value ) = foo( $arr )) {
+            if ( !( $key % 2 ) ) {
                 continue;
             }
 
-            do_something_odd($value);
+            do_something_odd( $value );
         }
 
         do {
@@ -360,17 +360,17 @@ final class MyClass extends Bar implements iTemplate
             $longVar1,
             $longerVar2,
             $muchLongerVar3
-        ) {
+         ) {
             // Body
         };
 
         $obj2 = clone $obj;
 
-        if (empty($var)) {
+        if ( empty( $var ) ) {
             echo '$var или 0, или пусто, или вообще не определена';
         }
 
-        if (isset($var)) {
+        if ( isset( $var ) ) {
             echo '$var определена, даже если она пустая';
         }
 
@@ -383,14 +383,14 @@ final class MyClass extends Bar implements iTemplate
         __METHOD__;
         __NAMESPACE__;
 
-        $c = (false and foo());
-        $d = (true or foo());
-        $c = (false xor foo());
+        $c = ( false and foo() );
+        $d = ( true or foo() );
+        $c = ( false xor foo() );
 
-        $array = array(1, 1, 1);
+        $array = array( 1, 1, 1 );
 
-        if ($step <= 0) {
-            throw new LogicException('Logic');
+        if ( $step <= 0 ) {
+            throw new LogicException( 'Logic' );
         }
 
         for ($i = $start; $i <= $limit; $i += $step) {
@@ -398,9 +398,9 @@ final class MyClass extends Bar implements iTemplate
         }
 
         global $foo;
-        unset($foo);
+        unset( $foo );
 
-        var_dump($a instanceof MyClass);
+        var_dump( $a instanceof MyClass );
 
         $bar = (int) $foo;
 
@@ -431,11 +431,11 @@ final class MyClass extends Bar implements iTemplate
         echo 'Bar';
     }
 
-    final public static function bar(callable $callback, $coffeeMaker = null)
+    final public static function bar( callable $callback, $coffeeMaker = null )
     {
-        if ($a == 5):
+        if ( $a == 5 ):
             echo "5";
-        elseif ($a == 6):
+        elseif ( $a == 6 ):
             echo "6";
         else:
             echo "other";
@@ -449,7 +449,7 @@ final class MyClass extends Bar implements iTemplate
         endwhile;
 
         for (;;):
-            if ($i > 10) {
+            if ( $i > 10 ) {
                 break;
             }
 
@@ -481,7 +481,7 @@ final class MyClass extends Bar implements iTemplate
         ClassA $param7,
         self $param8,
         Name\\Space\\ClassA $param8
-    ): void {
+     ): void {
         // Nothing
     }
 }

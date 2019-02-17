@@ -62,20 +62,20 @@ $var = array();
 $var = [];
 $var = [];
 
-$var = array("1", "2", "3");
-$var = array("1", "2", "3");
-$var = array(array("1"), array("2"), array("3"));
-$var = array(array("1"), array("2"), array("3"));
-$var = array(array("1"), array("2"), array("3"));
-$var = array(array("1"), array("2"), array("3"));
+$var = array( "1", "2", "3" );
+$var = array( "1", "2", "3" );
+$var = array( array( "1" ), array( "2" ), array( "3" ) );
+$var = array( array( "1" ), array( "2" ), array( "3" ) );
+$var = array( array( "1" ), array( "2" ), array( "3" ) );
+$var = array( array( "1" ), array( "2" ), array( "3" ) );
 
-$var = (array("foo", "bar"))();
-$var = (array("foo", "bar"))();
-$var = (array("foo", "bar"))();
+$var = ( array( "foo", "bar" ) )();
+$var = ( array( "foo", "bar" ) )();
+$var = ( array( "foo", "bar" ) )();
 
-$var = (["foo", "bar"])();
-$var = (["foo", "bar"])();
-$var = (["foo", "bar"])();
+$var = ( ["foo", "bar"] )();
+$var = ( ["foo", "bar"] )();
+$var = ( ["foo", "bar"] )();
 
 $arr = [$var, $other_var];
 $arr = [$var, $other_var];
@@ -86,12 +86,12 @@ $arr = ['key' => $var, 'other-key' => $other_var];
 [$var, $other_var] = $arr;
 ['key' => $var, 'other-key' => $other_var] = $arr;
 
-$var = array(1, 2, 3)[1];
-$var = array(1, 2, 3)[1];
+$var = array( 1, 2, 3 )[1];
+$var = array( 1, 2, 3 )[1];
 $var = [1, 2, 3][1];
 $var = [1, 2, 3][1];
-$var = array(new stdClass())[0];
-$var = array(new stdClass())[0];
+$var = array( new stdClass() )[0];
+$var = array( new stdClass() )[0];
 $var = [new stdClass()][0];
 $var = [new stdClass()][0];
 
@@ -198,7 +198,7 @@ $var = $var = $var;
 $var = $var += 1;
 $var = $var += 1;
 
-$var = ($var = 4) + 5;
+$var = ( $var = 4 ) + 5;
 $var = $var = ['key' => 'value'];
 
 $var = $var
@@ -216,39 +216,39 @@ for ($i = 1; $i <= 10; $i++) {
 }
 for ($i = 1, $j = 0; $i <= 10; $j += $i, print $i, $i++);
 
-if ($a = 1) {
+if ( $a = 1 ) {
 }
 
 while ($var = 1) {
 }
-while ($var = current($array) !== false) {
+while ($var = current( $array ) !== false) {
 }
-while (($var = current($array)) !== false) {
+while (( $var = current( $array ) ) !== false) {
 }
 
-$var = $var || ($var = new MyClass());
-$var = $var || ($var = new MyClass());
+$var = $var || ( $var = new MyClass() );
+$var = $var || ( $var = new MyClass() );
 
-if (true) {
+if ( true ) {
     $var = $var;
 }
-if (true) {
+if ( true ) {
     $var = $var;
 }
-if (true) {
+if ( true ) {
     $var = $var;
-} elseif (false) {
+} elseif ( false ) {
     $var = $var;
 }
-if (true) {
+if ( true ) {
     $var = $var;
-} elseif (false) {
+} elseif ( false ) {
     $var = $var;
 } else {
     $var = $var;
 }
 
-if (true) {
+if ( true ) {
     $var = $var;
     $var = $var;
 }
@@ -672,161 +672,161 @@ $var = $var += 10;
 
 $var = 10 + 20 + 30;
 $var = 10 + 20 + 30;
-$var = 10 + (20 + 30);
+$var = 10 + ( 20 + 30 );
 
 $var = '10' . '20' . '30';
 $var = '10' . '20' . '30';
-$var = '10' . ('20' . '30');
+$var = '10' . ( '20' . '30' );
 
-$var = 10 + (20 % 30);
-$var = (10 + 20) % 30;
-$var = 10 + (20 % 30);
+$var = 10 + ( 20 % 30 );
+$var = ( 10 + 20 ) % 30;
+$var = 10 + ( 20 % 30 );
 
-$var = 10 ** (20 ** 30);
-$var = (10 ** 20) ** 30;
-$var = 10 ** (20 ** 30);
+$var = 10 ** ( 20 ** 30 );
+$var = ( 10 ** 20 ) ** 30;
+$var = 10 ** ( 20 ** 30 );
 
-$var = (10 == 20) == 30;
-$var = 10 == (20 == 30);
+$var = ( 10 == 20 ) == 30;
+$var = 10 == ( 20 == 30 );
 
-$var = (10 === 20) === 30;
-$var = 10 === (20 === 30);
+$var = ( 10 === 20 ) === 30;
+$var = 10 === ( 20 === 30 );
 
-$var = (10 * 20) % 30;
-$var = (10 * 20) % 30;
-$var = 10 * (20 % 30);
+$var = ( 10 * 20 ) % 30;
+$var = ( 10 * 20 ) % 30;
+$var = 10 * ( 20 % 30 );
 
-$var = (10 * 20) / 30;
-$var = (10 * 20) / 30;
-$var = 10 * (20 / 30);
+$var = ( 10 * 20 ) / 30;
+$var = ( 10 * 20 ) / 30;
+$var = 10 * ( 20 / 30 );
 
-$var = (10 / 20) * 30;
-$var = (10 / 20) * 30;
-$var = 10 / (20 * 30);
+$var = ( 10 / 20 ) * 30;
+$var = ( 10 / 20 ) * 30;
+$var = 10 / ( 20 * 30 );
 
-$var = (10 << 20) << 30;
-$var = (10 << 20) << 30;
-$var = 10 << (20 << 30);
+$var = ( 10 << 20 ) << 30;
+$var = ( 10 << 20 ) << 30;
+$var = 10 << ( 20 << 30 );
 
-$var = (10 >> 20) >> 30;
-$var = (10 >> 20) >> 30;
-$var = 10 >> (20 >> 30);
+$var = ( 10 >> 20 ) >> 30;
+$var = ( 10 >> 20 ) >> 30;
+$var = 10 >> ( 20 >> 30 );
 
 $var = 10 ^ 20 ^ 30;
 $var = 10 ^ 20 ^ 30;
-$var = 10 ^ (20 ^ 30);
+$var = 10 ^ ( 20 ^ 30 );
 
 $var = 10 | 20 | 30;
 $var = 10 | 20 | 30;
-$var = 10 | (20 | 30);
+$var = 10 | ( 20 | 30 );
 
 $var = false || true;
 $var = false || true;
-($var = false) or true;
-$var = (false or true);
+( $var = false ) or true;
+$var = ( false or true );
 $var = true && false;
 $var = true && false;
-($var = true) and false;
-$var = (true and false);
+( $var = true ) and false;
+$var = ( true and false );
 
 $var = $var || $var();
-$var = ($var || $var)();
+$var = ( $var || $var )();
 $var = $var && $var();
-$var = ($var && $var)();
-$var = call($var || $var);
-$var = call($var || $var);
-$var = call($var && $var);
-$var = call($var && $var);
+$var = ( $var && $var )();
+$var = call( $var || $var );
+$var = call( $var || $var );
+$var = call( $var && $var );
+$var = call( $var && $var );
 
-$var = +($var || $var);
-$var = -($var || $var);
-$var = ~($var || $var);
+$var = +( $var || $var );
+$var = -( $var || $var );
+$var = ~( $var || $var );
 
-$var = ($var || $var)->foo;
-$var = ($var || $var)->foo();
-$var = ($var || $var)[1];
+$var = ( $var || $var )->foo;
+$var = ( $var || $var )->foo();
+$var = ( $var || $var )[1];
 
-$var = $var || ($var && $var);
-$var = ($var || $var) && $var;
-$var = $var || ($var && $var);
+$var = $var || ( $var && $var );
+$var = ( $var || $var ) && $var;
+$var = $var || ( $var && $var );
 
-$var = $var & ($var || 'test');
-$var = ($var || 'test') & $var;
-$var = $var & ($var . 'test');
-$var = ($var . 'test') & $var;
+$var = $var & ( $var || 'test' );
+$var = ( $var || 'test' ) & $var;
+$var = $var & ( $var . 'test' );
+$var = ( $var . 'test' ) & $var;
 $var = $var & $var || 'test';
 $var = $var || 'test' & $var;
 
-$var = ($var || $var) % 100;
-$var = ($var + $var) % 100;
-$var = 100 % ($var || $var);
-$var = 100 % ($var + $var);
+$var = ( $var || $var ) % 100;
+$var = ( $var + $var ) % 100;
+$var = 100 % ( $var || $var );
+$var = 100 % ( $var + $var );
 $var = $var || $var % 100;
-$var = $var + ($var % 100);
+$var = $var + ( $var % 100 );
 $var = 100 % $var || $var;
-$var = (100 % $var) + $var;
+$var = ( 100 % $var ) + $var;
 
 $var = $var + $var >> 1;
-$var = ($var - 1 >> $var) & $var;
+$var = ( $var - 1 >> $var ) & $var;
 $var = $var > $var ? 0 : $var - $var >> $var;
-$var = ($var - $var >> $var) + 1;
+$var = ( $var - $var >> $var ) + 1;
 
-if ($var < 1 << $var + $var) {
+if ( $var < 1 << $var + $var ) {
 }
 
-$var = $var < $var ? 0 : ($var - 1 >> $var) << $var;
-$var = 1 - 2 * ($var[3] >> 7);
-$var = ((($var[3] << 1) & 0xff) | ($var[2] >> 7)) - 127;
-$var = (($var[2] & 0x7f) << 16) | ($var[1] << 8) | $var[0];
+$var = $var < $var ? 0 : ( $var - 1 >> $var ) << $var;
+$var = 1 - 2 * ( $var[3] >> 7 );
+$var = ( ( ( $var[3] << 1 ) & 0xff ) | ( $var[2] >> 7 ) ) - 127;
+$var = ( ( $var[2] & 0x7f ) << 16 ) | ( $var[1] << 8 ) | $var[0];
 
-$var = ((2 / 3) * 10) / 2 + 2;
+$var = ( ( 2 / 3 ) * 10 ) / 2 + 2;
 
-$var = (($var / $var) * $var - $var / 2) * call($var);
-$var = (($var / $var) * $var - $var / 2) * call($var);
+$var = ( ( $var / $var ) * $var - $var / 2 ) * call( $var );
+$var = ( ( $var / $var ) * $var - $var / 2 ) * call( $var );
 
-$var = ($var % 10) - 5;
-$var = ($var * $var) % 10;
+$var = ( $var % 10 ) - 5;
+$var = ( $var * $var ) % 10;
 $var = $var % 10 > 5;
 $var = $var % 10 == 0;
 
 $var = $var + $var / $var;
 $var = $var / $var + $var;
 
-$var = ($var * $var) % $var;
-$var = ($var / $var) % $var;
-$var = ($var % $var) * $var;
-$var = ($var % $var) / $var;
+$var = ( $var * $var ) % $var;
+$var = ( $var / $var ) % $var;
+$var = ( $var % $var ) * $var;
+$var = ( $var % $var ) / $var;
 
-$var = ($var % $var) % $var;
+$var = ( $var % $var ) % $var;
 
-$var = ($var << $var) >> $var;
-$var = ($var >> $var) << $var;
-$var = ($var >> $var) >> $var;
+$var = ( $var << $var ) >> $var;
+$var = ( $var >> $var ) << $var;
+$var = ( $var >> $var ) >> $var;
 $var = $var + $var >> $var;
 $var = $var + $var >> $var;
-$var = $var + ($var >> $var);
+$var = $var + ( $var >> $var );
 
-$var = $var | ($var & $var);
-$var = ($var & $var) | $var;
+$var = $var | ( $var & $var );
+$var = ( $var & $var ) | $var;
 $var = $var ^ $var ^ $var;
 $var = $var & $var & $var;
 $var = $var | $var | $var;
-$var = $var & ($var >> $var);
-$var = ($var << $var) | $var;
+$var = $var & ( $var >> $var );
+$var = ( $var << $var ) | $var;
 
 $var = $var ? 'foo' : 'bar' . 'test';
-$var = ($var ? 'foo' : 'bar') . 'test';
+$var = ( $var ? 'foo' : 'bar' ) . 'test';
 $var = $var ? 'foo' : 'bar' . 'test';
 
-call($var + $var);
+call( $var + $var );
 
-$var = call($var + $var);
+$var = call( $var + $var );
 
 $var = $var + $var ** 2;
-$var = ($var + $var) ** 2;
+$var = ( $var + $var ) ** 2;
 $var = $var + $var ** 2;
-$var = (+$var) ** 2;
-$var = (+$var) ** 2;
+$var = ( +$var ) ** 2;
+$var = ( +$var ) ** 2;
 
 $var = $foo instanceof Foo;
 $var = $foo instanceof Foo || $foo instanceof Foo;
@@ -848,13 +848,13 @@ $var = !!!$var;
 
 $var = !$var || !$var;
 $var = !$var || !$var;
-$var = !(!$var || !$var);
+$var = !( !$var || !$var );
 
 $var = $var + $var * $var;
-$var = ($var + $var) * $var;
+$var = ( $var + $var ) * $var;
 
 $var = @foo() || @foo();
-$var = @(foo() || foo());
+$var = @( foo() || foo() );
 
 $var += $var += $var += $var;
 $var -= $var -= $var -= $var;
@@ -870,79 +870,79 @@ $var <<= $var <<= $var <<= $var;
 $var >>= $var >>= $var >>= $var;
 
 $var = $var | $var | $var;
-$var = $var | ($var | $var);
+$var = $var | ( $var | $var );
 $var = $var | $var | $var;
 $var = $var & $var & $var;
-$var = $var & ($var & $var);
+$var = $var & ( $var & $var );
 $var = $var & $var & $var;
 
-$var = ($var ^ $var) | $var;
-$var = ($var ^ $var) | $var;
-$var = $var | ($var ^ $var);
-$var = $var | ($var ^ $var);
-$var = ($var | $var) ^ $var;
+$var = ( $var ^ $var ) | $var;
+$var = ( $var ^ $var ) | $var;
+$var = $var | ( $var ^ $var );
+$var = $var | ( $var ^ $var );
+$var = ( $var | $var ) ^ $var;
 
-$var = ($var & $var) | $var;
-$var = ($var & $var) | $var;
-$var = $var | ($var & $var);
-$var = $var | ($var & $var);
-$var = ($var | $var) & $var;
+$var = ( $var & $var ) | $var;
+$var = ( $var & $var ) | $var;
+$var = $var | ( $var & $var );
+$var = $var | ( $var & $var );
+$var = ( $var | $var ) & $var;
 
 $var = $var == $var || false;
 $var = $var == $var || false;
-$var = $var == ($var || false);
+$var = $var == ( $var || false );
 
 $var = false || $var == $var;
 $var = false || $var == $var;
-$var = ($var || false) == $var;
+$var = ( $var || false ) == $var;
 
 $var = 'string' . true ? '1' : '2';
-$var = 'string' . (true ? '1' : '2');
+$var = 'string' . ( true ? '1' : '2' );
 
-$var = 'string' . (100 + 100);
+$var = 'string' . ( 100 + 100 );
 $var = 100 + 100 . 'string';
-$var = 'string' . ($var || 100);
-$var = ($var || 100) . 'string';
+$var = 'string' . ( $var || 100 );
+$var = ( $var || 100 ) . 'string';
 $var = 'string' . $var * 100;
 $var = $var * 100 . 'string';
 $var = 'string' . !$var;
 $var = !$var . 'string';
-$var = 'string' . ($var | 100);
-$var = ($var | 100) . 'string';
+$var = 'string' . ( $var | 100 );
+$var = ( $var | 100 ) . 'string';
 
 $var = $var . $var % $var;
-$var = ($var . $var) % $var;
+$var = ( $var . $var ) % $var;
 $var = $var % $var . $var;
-$var = $var % ($var . $var);
+$var = $var % ( $var . $var );
 
 $var = '100' - '100' - '100';
 $var = '100' - '100' - '100';
-$var = '100' - ('100' - '100');
+$var = '100' - ( '100' - '100' );
 
-if (false || true) {
+if ( false || true ) {
 }
-if (false || true) {
+if ( false || true ) {
 }
-if (false or true) {
+if ( false or true ) {
 }
-if (false or true) {
+if ( false or true ) {
 }
-if (true && false) {
+if ( true && false ) {
 }
-if (true && false) {
+if ( true && false ) {
 }
-if (true and false) {
+if ( true and false ) {
 }
-if (true and false) {
+if ( true and false ) {
 }
 
-if (!$foo or $bar == -1) {
+if ( !$foo or $bar == -1 ) {
 }
-if (!$foo or $bar == -1) {
+if ( !$foo or $bar == -1 ) {
 }
-if ((!$foo or $bar) == -1) {
+if ( ( !$foo or $bar ) == -1 ) {
 }
-if (!$foo or $bar == -1) {
+if ( !$foo or $bar == -1 ) {
 }
 
 do {
@@ -954,37 +954,37 @@ for ($foo or $bar; ; ) {
 switch ($foo or $bar) {
 }
 
-$a ** ($b ** $c);
-($a ** $b) ** $c;
+$a ** ( $b ** $c );
+( $a ** $b ) ** $c;
 $a->b ** $c;
-(-$a) ** $b;
+( -$a ) ** $b;
 $a ** -$b;
--($a ** $b);
-($a * $b) ** $c;
-$a ** ($b * $c);
-($a % $b) ** $c;
+-( $a ** $b );
+( $a * $b ) ** $c;
+$a ** ( $b * $c );
+( $a % $b ) ** $c;
 
 $var = $var + $var ?? '';
-$var = $var + ($var ?? '');
+$var = $var + ( $var ?? '' );
 $var = $var + $var ?? '';
 $var = $var ?? null + 1;
-$var = ($var ?? null) + 1;
-$var = $var && ($var ?? true);
-$var = ($var ?? true) && $var;
-$var = $var && ($var ?? null) === true;
-$var = ($var ?? null) === true && $var;
+$var = ( $var ?? null ) + 1;
+$var = $var && ( $var ?? true );
+$var = ( $var ?? true ) && $var;
+$var = $var && ( $var ?? null ) === true;
+$var = ( $var ?? null ) === true && $var;
 
 $findAll = $cachesNames === [];
 $findAll = $cachesNames === [];
 
-$isNamespaced = strpos($fixture, '\\\\') !== false;
-$isNamespaced = strpos($fixture, '\\\\') !== false;
+$isNamespaced = strpos( $fixture, '\\\\' ) !== false;
+$isNamespaced = strpos( $fixture, '\\\\' ) !== false;
 
 $var = $a['apply_time'] > $b['apply_time'] ? -1 : +1;
 $var = $a['apply_time'] > $b['apply_time'] ? -1 : +1;
 
-$var = $page > 0 || ($page == 0 && $this->forcePageParam);
-$var = $page > 0 || ($page == 0 && $this->forcePageParam);
+$var = $page > 0 || ( $page == 0 && $this->forcePageParam );
+$var = $page > 0 || ( $page == 0 && $this->forcePageParam );
 
 `;
 
@@ -1098,10 +1098,10 @@ $var = $foo->call()->call();
 $var = $foo->call()->call();
 $var = $foo->call()->call();
 
-$var = call(call());
-$var = call(...call());
-$var = call(call());
-$var = call(call(), call());
+$var = call( call() );
+$var = call( ...call() );
+$var = call( call() );
+$var = call( call(), call() );
 
 $var = $func();
 $var = $func();
@@ -1116,11 +1116,11 @@ $var = $this->$name();
 $var = Foo::call();
 $var = Foo::call();
 
-$var = (array("Foo", "bar"))();
-$var = (array(new Foo(), "baz"))();
-$var = ((string) 1234)();
-$var = ("Foo::bar")();
-$var = ("Foo::bar")();
+$var = ( array( "Foo", "bar" ) )();
+$var = ( array( new Foo(), "baz" ) )();
+$var = ( (string) 1234 )();
+$var = ( "Foo::bar" )();
+$var = ( "Foo::bar" )();
 
 `;
 
@@ -1222,83 +1222,89 @@ $this->apc->put($this->prefix.$key, $value, (int) ($minutes * 60));
 (int) '1';
 
 $var = (int) '1';
-$var = ((int) '1');
-$var = ((int) '1');
-$var = ((bool) 2.3e5);
+$var = ( (int) '1' );
+$var = ( (int) '1' );
+$var = ( (bool) 2.3e5 );
 $var = (object) [];
 $var = (object) [];
-$var = ((object) []);
-$var = ((object) array('1' => 'foo'));
-$var = ((object) ['1' => 'foo']);
-$var = ((object) 'ciao')->scalar;
-$var = ((object) array('test'))->{'0'};
-$var = ((object) array('test'))->{'0'};
+$var = ( (object) [] );
+$var = ( (object) array( '1' => 'foo' ) );
+$var = ( (object) ['1' => 'foo'] );
+$var = ( (object) 'ciao' )->scalar;
+$var = ( (object) array( 'test' ) )->{'0'};
+$var = ( (object) array( 'test' ) )->{'0'};
 $var = (array) new B();
 $var = (array) new B();
-$var = ((array) new B());
-$var = ((array) new B())['foo'];
-$var = ((string) 1234)[1];
-$var = ((string) 123)();
-$var = ((string) 123)();
+$var = ( (array) new B() );
+$var = ( (array) new B() )['foo'];
+$var = ( (string) 1234 )[1];
+$var = ( (string) 123 )();
+$var = ( (string) 123 )();
 $var = "test"[0];
 $var = (array) "test"[0];
-$var = ((array) "test")[0];
+$var = ( (array) "test" )[0];
 $var = [(int) 'key' => (int) '1'];
-$var = [((int) 'key') => ((int) '1')];
-$var = [((int) 'key') => ((int) '1')];
+$var = [( (int) 'key' ) => ( (int) '1' )];
+$var = [( (int) 'key' ) => ( (int) '1' )];
 $var = (int) $raw['data'] + $value;
-$var = ((int) $raw['data']) + $value;
+$var = ( (int) $raw['data'] ) + $value;
 $var = (bool) $var ? 1 : 2;
 $var = (bool) $var ? 1 : 2;
 $var = (bool) $var + 1 ? 1 : 2;
-$var = ((bool) $var) + 1 ? 1 : 2;
+$var = ( (bool) $var ) + 1 ? 1 : 2;
 $var = (bool) $var + 1 ? 1 : 2;
-$var = ((bool) $var) ? 1 : 2;
-$var = ((bool) $var) ? (bool) 1 : (bool) 2;
-$var = ((bool) $var) ? ((bool) 1) : ((bool) 2);
-$var = ((bool) $var) ? (bool) 1 + 2 : (bool) 2 + 3;
-$var = ((bool) $var) ? ((bool) 1 + 2) : ((bool) 2 + 3);
-$var = ((bool) $var) ? (bool) $var ? 1 : 2 : (bool) $var ? 1 : 2;
-$var = (((bool) $var) ? (((bool) $var) ? 1 : 2) : ((bool) $var)) ? 1 : 2;
-$var = ((bool) $var) ? (bool) $var ? 1 : 2 : (bool) $var ? 1 : 2;
+$var = ( (bool) $var ) ? 1 : 2;
+$var = ( (bool) $var ) ? (bool) 1 : (bool) 2;
+$var = ( (bool) $var ) ? ( (bool) 1 ) : ( (bool) 2 );
+$var = ( (bool) $var ) ? (bool) 1 + 2 : (bool) 2 + 3;
+$var = ( (bool) $var ) ? ( (bool) 1 + 2 ) : ( (bool) 2 + 3 );
+$var = ( (bool) $var ) ? (bool) $var ? 1 : 2 : (bool) $var ? 1 : 2;
+$var = ( ( (bool) $var )
+        ? ( ( (bool) $var )
+            ? 1
+            : 2 )
+        : ( (bool) $var ) )
+    ? 1
+    : 2;
+$var = ( (bool) $var ) ? (bool) $var ? 1 : 2 : (bool) $var ? 1 : 2;
 $var = (bool) $var ? (bool) $var ? 1 : 2 : (bool) $var ? 1 : 2;
 $var = (bool) $var->foo;
 $var = (bool) $var->foo;
-$var = ((bool) $var->foo);
-$var = ((object) $var)->foo;
-$var = ((object) $var)[0];
+$var = ( (bool) $var->foo );
+$var = ( (object) $var )->foo;
+$var = ( (object) $var )[0];
 $var = (int) 'test' + (int) 'test';
-$var = ((int) 'test') + ((int) 'test');
-$var = ((int) 'test') * ((int) 'test');
-$var = ((int) 'test') | ((int) 'test');
-$var = ((int) 'test') % ((int) 'test');
-$var = @((int) 'test');
-$var = @((int) call());
+$var = ( (int) 'test' ) + ( (int) 'test' );
+$var = ( (int) 'test' ) * ( (int) 'test' );
+$var = ( (int) 'test' ) | ( (int) 'test' );
+$var = ( (int) 'test' ) % ( (int) 'test' );
+$var = @( (int) 'test' );
+$var = @( (int) call() );
 $var = (int) (int) 1;
-$var = (int) ((int) 1);
-$var = call((int) $var, (int) call(), (int) $minutes * 60);
-$var = call(((int) $var), ((int) call()), (int) ($minutes * 60));
+$var = (int) ( (int) 1 );
+$var = call( (int) $var, (int) call(), (int) $minutes * 60 );
+$var = call( ( (int) $var ), ( (int) call() ), (int) ( $minutes * 60 ) );
 $var = $var + (int) $minutes * 60;
-$var = $var + (int) ($minutes * 60);
+$var = $var + (int) ( $minutes * 60 );
 
 return (int) $var;
 return (int) $var;
 
-if ((int) 1 === 1) {
+if ( (int) 1 === 1 ) {
 }
-if (1 === (int) 1) {
+if ( 1 === (int) 1 ) {
 }
-if (((int) 1) === 1) {
+if ( ( (int) 1 ) === 1 ) {
 }
-if (1 === ((int) 1)) {
+if ( 1 === ( (int) 1 ) ) {
 }
-if ((int) 1 === (int) 1) {
+if ( (int) 1 === (int) 1 ) {
 }
-if (((int) 1) === (int) 1) {
+if ( ( (int) 1 ) === (int) 1 ) {
 }
-if ((int) 1 === ((int) 1)) {
+if ( (int) 1 === ( (int) 1 ) ) {
 }
-if (((int) 1) === ((int) 1)) {
+if ( ( (int) 1 ) === ( (int) 1 ) ) {
 }
 
 $var = (bool) call();
@@ -1306,10 +1312,10 @@ $var = $var || (bool) call();
 $var = (bool) call() || $var;
 
 $var = (int) $var === 1;
-$var = ((int) $var) === 1;
-$var = (int) ($var === 1);
+$var = ( (int) $var ) === 1;
+$var = (int) ( $var === 1 );
 
-$this->apc->put($this->prefix . $key, $value, (int) ($minutes * 60));
+$this->apc->put( $this->prefix . $key, $value, (int) ( $minutes * 60 ) );
 
 `;
 
@@ -1355,35 +1361,35 @@ clone $a;
 
 $var = clone $a;
 $var = clone $a();
-$var = (clone $a)();
+$var = ( clone $a )();
 $var = clone $a;
-$var = (clone $a)->foo;
+$var = ( clone $a )->foo;
 $var = clone $a->foo;
-$var = (clone $a)->foo();
+$var = ( clone $a )->foo();
 
-$var = (clone foo())->bar()->foo();
-$var = (clone foo())->bar()->foo();
-$var = (clone foo())->bar()->foo();
-$var = (clone foo())->bar()->foo()[0];
-$var = (clone foo())->bar()->foo()[0][1];
-$var = (clone foo())
+$var = ( clone foo() )->bar()->foo();
+$var = ( clone foo() )->bar()->foo();
+$var = ( clone foo() )->bar()->foo();
+$var = ( clone foo() )->bar()->foo()[0];
+$var = ( clone foo() )->bar()->foo()[0][1];
+$var = ( clone foo() )
     ->bar()
     ->foo()
     ->baz();
-$var = (clone $foo())->bar;
-$var = (clone $bar->y)->x;
-$var = (clone $foo)[0];
-$var = (clone $foo)[0]['string'];
+$var = ( clone $foo() )->bar;
+$var = ( clone $bar->y )->x;
+$var = ( clone $foo )[0];
+$var = ( clone $foo )[0]['string'];
 
 $var = clone $a->b;
 $var = clone $a->b();
-$var = (clone $a)->b();
-$var = (clone $a)->b();
+$var = ( clone $a )->b();
+$var = ( clone $a )->b();
 
 $var = clone $var;
 $var = clone $var;
 $var = clone $var->foo;
-$var = (clone $var->foo)->foo;
+$var = ( clone $var->foo )->foo;
 
 `;
 
@@ -1411,25 +1417,25 @@ var_dump(...(function() use ($type) {})());
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-(function () {})();
+( function () {} )();
 
 $var = function () {};
 $var = function () {};
-$var = (function () {})();
-$var = (function () {})()();
+$var = ( function () {} )();
+$var = ( function () {} )()();
 $func = static function () {};
 $func = static function () {};
 
 function foo()
 {
     $var = function () {};
-    $var = (function () {})();
+    $var = ( function () {} )();
 }
 
-call(function () {}, function () {}, function () {});
-call(function () {}, function () {}, function () {});
+call( function () {}, function () {}, function () {} );
+call( function () {}, function () {}, function () {} );
 
-var_dump(...(function () use ($type) {})());
+var_dump( ...( function () use ( $type ) {} )() );
 
 `;
 
@@ -1552,9 +1558,9 @@ while ([$id, $name, $salary] = $result->fetch(PDO::FETCH_NUM)) {}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-if ($a > $b) {
+if ( $a > $b ) {
     echo "a is bigger than b";
-} elseif ($a == $b) {
+} elseif ( $a == $b ) {
     echo "a is equal to b";
 } else {
     echo "a is smaller than b";
@@ -1575,7 +1581,7 @@ switch ($i) {
     case 1:
         echo "i equals 1";
         break;
-    case 'test' . (1 > 2 ? 'foo' : 'bar'):
+    case 'test' . ( 1 > 2 ? 'foo' : 'bar' ):
         echo "i equals 2";
         break;
 }
@@ -1587,7 +1593,7 @@ switch ($i + 1) {
     case 1 + 2:
         echo "i equals 1";
         break;
-    case 1 + (1 > 2 ? 1 : 3):
+    case 1 + ( 1 > 2 ? 1 : 3 ):
         echo "i equals 2";
         break;
 }
@@ -1619,16 +1625,16 @@ while ($i++ < 5) {
     echo "Neither does this.<br />\\n";
 }
 
-if ($var = 1) {
+if ( $var = 1 ) {
 }
-if ($var = 1) {
+if ( $var = 1 ) {
 }
-if ($var = 1) {
-} elseif ($var = 1) {
+if ( $var = 1 ) {
+} elseif ( $var = 1 ) {
 } else {
 }
-if ($var = 1) {
-} elseif ($var = 1) {
+if ( $var = 1 ) {
+} elseif ( $var = 1 ) {
 } else {
 }
 do {
@@ -1656,9 +1662,9 @@ switch ($var = 1) {
 switch ($var = 1) {
 }
 
-while (list($id, $name, $salary) = $result->fetch(PDO::FETCH_NUM)) {
+while (list( $id, $name, $salary ) = $result->fetch( PDO::FETCH_NUM )) {
 }
-while ([$id, $name, $salary] = $result->fetch(PDO::FETCH_NUM)) {
+while ([$id, $name, $salary] = $result->fetch( PDO::FETCH_NUM )) {
 }
 
 `;
@@ -1672,7 +1678,7 @@ declare(strict_types=1);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 $a->c();
 
@@ -1724,18 +1730,28 @@ echo "Hello World";
 echo "Hello World";
 
 echo "Sum: ", 1 + 2;
-echo "Hello ", isset($name) ? $name : "John Doe", "!";
-echo "Hello ", isset($name) ? $name : "John Doe", "!";
+echo "Hello ", isset( $name ) ? $name : "John Doe", "!";
+echo "Hello ", isset( $name ) ? $name : "John Doe", "!";
 
-echo 'Sum: ' . (1 + 2);
-echo 'Hello ' . isset($name) ? $name : 'John Doe' . '!';
-echo 'Hello ' . (isset($name) ? $name : 'John Doe') . '!';
+echo 'Sum: ' . ( 1 + 2 );
+echo 'Hello ' . isset( $name ) ? $name : 'John Doe' . '!';
+echo 'Hello ' . ( isset( $name ) ? $name : 'John Doe' ) . '!';
 
 echo $some_var ? 'true' : 'false';
 echo $some_var ? 'true' : 'false';
 
-echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters.', chr(10);
-echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters.', chr(10);
+echo 'This ',
+    'string ',
+    'was ',
+    'made ',
+    'with multiple parameters.',
+    chr( 10 );
+echo 'This ',
+    'string ',
+    'was ',
+    'made ',
+    'with multiple parameters.',
+    chr( 10 );
 echo 'This ' . 'string ' . 'was ' . 'made ' . 'with concatenation.' . "\\n";
 echo 'This ' . 'string ' . 'was ' . 'made ' . 'with concatenation.' . "\\n";
 
@@ -1753,12 +1769,12 @@ that the here document terminator must appear on a
 line with just a semicolon. no extra whitespace!
 END;
 
-echo (function () {
+echo ( function () {
     return 'test';
-})();
-echo (function () {
+} )();
+echo ( function () {
     return 'test';
-})();
+} )();
 
 `;
 
@@ -1775,13 +1791,13 @@ if ((empty($var))) {}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-empty($var);
-empty($var);
+empty( $var );
+empty( $var );
 
-$var = empty($var);
-$var = empty($var);
+$var = empty( $var );
+$var = empty( $var );
 
-if (empty($var)) {
+if ( empty( $var ) ) {
 }
 
 `;
@@ -1812,12 +1828,12 @@ $var = eval('return 1;');
 $var = eval('return 1;');
 $var = eval('return 1;');
 
-if (eval('return 1;')) {
+if ( eval('return 1;') ) {
 }
-if (eval('return 1;')) {
+if ( eval('return 1;') ) {
 }
 
-if (eval('return 1;') === 1) {
+if ( eval('return 1;') === 1 ) {
 }
 
 `;
@@ -1843,15 +1859,15 @@ exit(1);
 
 exit(1);
 
-if (true) {
+if ( true ) {
     exit(1);
 }
-if (true) {
+if ( true ) {
     exit(1);
 }
 
-call(exit(1));
-call(exit(1));
+call( exit(1) );
+call( exit(1) );
 
 `;
 
@@ -1912,9 +1928,9 @@ function foo()
     include 'foo.php';
 }
 
-if (include 'vars.php' == true) {
+if ( include 'vars.php' == true ) {
 }
-if ((include 'vars.php') == true) {
+if ( ( include 'vars.php' ) == true ) {
 }
 
 include $path . 'example-config-file.php';
@@ -1925,7 +1941,7 @@ include __DIR__ . '/../src/includeFile.php';
 include __DIR__ . '/../src/includeFile.php';
 include __DIR__ . '/../src/includeFile.php';
 
-include dirname(dirname(__FILE__)) . '/prepend.php';
+include dirname( dirname( __FILE__ ) ) . '/prepend.php';
 
 include $_GET['id'] . ".php";
 
@@ -1946,15 +1962,15 @@ if ((isset($var))) {}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-isset($var);
-isset($var);
+isset( $var );
+isset( $var );
 
-$var = isset($var);
-$var = isset($var);
-$var = isset($var, $var, $var);
-$var = isset($var, $var, $var);
+$var = isset( $var );
+$var = isset( $var );
+$var = isset( $var, $var, $var );
+$var = isset( $var, $var, $var );
 
-if (isset($var)) {
+if ( isset( $var ) ) {
 }
 
 `;
@@ -2078,7 +2094,7 @@ $var = $var->bar()->foo();
 $var = $var->bar()->foo();
 $var = $var->bar()->foo();
 
-$var = ((object) $var->bar()->foo());
+$var = ( (object) $var->bar()->foo() );
 $var = (object) $var->bar()->foo();
 
 $var = $var[0];
@@ -2110,12 +2126,12 @@ $var = $var[0][1]::foo();
 $var = $var[0]->foo()->baz;
 $var = $var[0]->foo()->baz;
 
-$var = (new Foo())->bar;
+$var = ( new Foo() )->bar;
 // TODO: uncomment after resolve https://github.com/glayzzle/php-parser/issues/185
 // $var = (new Foo())::bar;
-$var = (new Foo())->bar();
-$var = (new Foo())::bar();
-$var = (new Foo())[1];
+$var = ( new Foo() )->bar();
+$var = ( new Foo() )::bar();
+$var = ( new Foo() )[1];
 
 $var = $var->bar()();
 $var = $var->bar()();
@@ -2218,51 +2234,51 @@ new Translator(
     new MessageFormatter(),
     'en',
     array(),
-    array('foo' => 'bar')
-); ?>
+    array( 'foo' => 'bar' )
+ ); ?>
 <?php new Translator(
     $container,
     new MessageFormatter(),
     'en',
     $someOtherVar,
-    array('foo' => 'bar')
-); ?>
-<?php new Translator($container, new MessageFormatter(), 'en', $someOtherVar, [
+    array( 'foo' => 'bar' )
+ ); ?>
+<?php new Translator( $container, new MessageFormatter(), 'en', $someOtherVar, [
     'foo' => 'bar'
 ]); ?>
 <?php
 $var = new Foo();
 $var = new Foo();
-$var = (new Foo())->c();
+$var = ( new Foo() )->c();
 $var = new class {
-    public function log($msg)
+    public function log( $msg )
     {
         echo $msg;
     }
 };
-$var = (new foo())->bar();
-$var = (new foo())->bar()->foo();
-$var = (new foo())->bar()->foo();
-$var = (new foo())->bar()->foo();
-$var = (new foo())->bar()->foo()[0];
-$var = (new foo())->bar()->foo()[0][1];
-$var = (new foo())
+$var = ( new foo() )->bar();
+$var = ( new foo() )->bar()->foo();
+$var = ( new foo() )->bar()->foo();
+$var = ( new foo() )->bar()->foo();
+$var = ( new foo() )->bar()->foo()[0];
+$var = ( new foo() )->bar()->foo()[0][1];
+$var = ( new foo() )
     ->bar()
     ->foo()
     ->baz();
-$var = (new $foo())->bar;
-$var = (new $bar->y())->x;
-$var = (new foo())[0];
-$var = (new foo())[0]['string'];
+$var = ( new $foo() )->bar;
+$var = ( new $bar->y() )->x;
+$var = ( new foo() )[0];
+$var = ( new foo() )[0]['string'];
 $var = new $a->b();
 $var = new $a->b();
-$var = (new $a())->b();
-$var = (new $a())->b();
-(new class {})->foo;
-(new class {})->foo();
-(new class {})();
-(new class {})['foo'];
-$var = (new class {})->foo;
+$var = ( new $a() )->b();
+$var = ( new $a() )->b();
+( new class {} )->foo;
+( new class {} )->foo();
+( new class {} )();
+( new class {} )['foo'];
+$var = ( new class {} )->foo;
 
 
 `;
@@ -2273,7 +2289,7 @@ include 'foo.php' . ($test ? 'foo' : 'bar');
 include ($test ? 'foo' : 'bar');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-include 'foo.php' . ($test ? 'foo' : 'bar');
+include 'foo.php' . ( $test ? 'foo' : 'bar' );
 include $test ? 'foo' : 'bar';
 
 `;
@@ -2355,12 +2371,12 @@ $var--;
 $var = ++$var;
 $var = ++$var;
 
-$var = +(++$var);
+$var = +( ++$var );
 $var = -++$var;
 $var = ~++$var;
 
 $var = +--$var;
-$var = -(--$var);
+$var = -( --$var );
 $var = ~--$var;
 
 $var = +$var++;
@@ -2371,31 +2387,31 @@ $var = +$var--;
 $var = -$var--;
 $var = ~$var--;
 
-$var = (++$var) ** 2;
-$var = (++$var) ** 2;
+$var = ( ++$var ) ** 2;
+$var = ( ++$var ) ** 2;
 
-$var = ($var++) ** 2;
-$var = ($var++) ** 2;
+$var = ( $var++ ) ** 2;
+$var = ( $var++ ) ** 2;
 
-$var = +(+(++$var));
-$var = +(+$var++);
+$var = +( +( ++$var ) );
+$var = +( +$var++ );
 $var = ~-++$var;
 $var = ~-$var++;
 
 $a->b++;
 $a->b++;
 ++$a->b;
-(++$a)->b;
+( ++$a )->b;
 
-($a->b++)->call();
-($a->b++)[1];
-($var++)();
-$var = call($var->_uuidCounter++);
+( $a->b++ )->call();
+( $a->b++ )[1];
+( $var++ )();
+$var = call( $var->_uuidCounter++ );
 
-(--$a->b)->call();
-(--$a->b)[1];
-(--$var)();
-$var = call(--$var->_uuidCounter);
+( --$a->b )->call();
+( --$a->b )[1];
+( --$var )();
+$var = call( --$var->_uuidCounter );
 
 `;
 
@@ -2473,21 +2489,21 @@ that the here document terminator must appear on a
 line with just a semicolon no extra whitespace!
 END;
 
-if (print "foo" && (print "bar")) {
+if ( print "foo" && ( print "bar" ) ) {
 }
 
-if ((print "foo") && (print "bar")) {
+if ( ( print "foo" ) && ( print "bar" ) ) {
 }
 
 $var = $var ? print "$string_message<br />" : print "$string_message\\n";
 $var = $var ? print "$string_message<br />" : print "$string_message\\n";
 $var = $var ? print "$string_message<br />" : print "$string_message\\n";
 
-print 1 . (print 2 + 3); // 511
-print 1 . (print 2) + 3; // 214
+print 1 . ( print 2 + 3 ); // 511
+print 1 . ( print 2 ) + 3; // 214
 
-print ($var || $var) && $var;
-print ($var || $var) && $var;
+print ( $var || $var ) && $var;
+print ( $var || $var ) && $var;
 
 `;
 
@@ -2566,60 +2582,60 @@ $var = $var ? 1 : 2;
 
 $var = (int) $var + 1 === 2 ? '1' : '2';
 $var = (int) $var + 1 === 2 ? '1' : '2';
-$var = ((int) $var) + 1 === 2 ? '1' : '2';
+$var = ( (int) $var ) + 1 === 2 ? '1' : '2';
 
-($var ? $var : $var)();
-($var ? $var : $var)->prop;
-($var ? $var : $var)->prop();
-($var ? $var : $var)[1];
-($var ? $var : $var)->d();
-($var ? $var : $var)->d()->e();
-($var ? $var : $var)
+( $var ? $var : $var )();
+( $var ? $var : $var )->prop;
+( $var ? $var : $var )->prop();
+( $var ? $var : $var )[1];
+( $var ? $var : $var )->d();
+( $var ? $var : $var )->d()->e();
+( $var ? $var : $var )
     ->d()
     ->e()
     ->f();
-($var
-    ? $var->responseBody($var->currentUser)
-    : $var->responseBody($var->defaultUser)
-)->map();
-($var
-    ? $var . responseBody($var->currentUser)
-    : $var . responseBody($var->defaultUser)
-)
+( $var
+    ? $var->responseBody( $var->currentUser )
+    : $var->responseBody( $var->defaultUser )
+ )->map();
+( $var
+    ? $var . responseBody( $var->currentUser )
+    : $var . responseBody( $var->defaultUser )
+ )
     ->map()
     ->filter();
-($var
-    ? $var . responseBody($var->currentUser)
-    : $var . responseBody($var)
-)->map();
+( $var
+    ? $var . responseBody( $var->currentUser )
+    : $var . responseBody( $var )
+ )->map();
 $var[
-    $var ? $var->responseBody($var->currentUser) : $var->responseBody($var)
+    $var ? $var->responseBody( $var->currentUser ) : $var->responseBody( $var )
 ]->map();
 
 $var = $var . $var ? "()" : "";
 $var = $var . $var ? "()" : "";
-$var = $var . ($var ? "()" : "");
-$var = +($var ? 1 : 2);
-$var = +(+$var ? 1 : 2);
-$var = +($var++ ? 1 : 2);
-$var = (true
+$var = $var . ( $var ? "()" : "" );
+$var = +( $var ? 1 : 2 );
+$var = +( +$var ? 1 : 2 );
+$var = +( $var++ ? 1 : 2 );
+$var = ( true
         ? 'true'
-        : false)
-    ? (true
+        : false )
+    ? ( true
         ? 'true'
-        : false)
-    : (true
+        : false )
+    : ( true
         ? 'true'
-        : false);
-$var = ($var ? ($var1 ? 1 : 2) : $var2) ? 3 : 4;
+        : false );
+$var = ( $var ? ( $var1 ? 1 : 2 ) : $var2 ) ? 3 : 4;
 
 $var = $var ?: $var ?: $var ?: 'string';
 $var = $var ?: $var ?: $var ?: 'string';
 $var = $var ?: $var ?: $var ?: 'string';
 $var = $var ?: $var ?: $var ?: 'string';
-$var = $var ?: ($var ?: $var) ?: 'string';
-$var = $var ?: ($var ?: $var ?: 'string');
-$var = $var ?: ($var ?: ($var ?: 'string'));
+$var = $var ?: ( $var ?: $var ) ?: 'string';
+$var = $var ?: ( $var ?: $var ?: 'string' );
+$var = $var ?: ( $var ?: ( $var ?: 'string' ) );
 
 `;
 
@@ -2647,7 +2663,7 @@ return 1 + 2;
 return 'veryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString' .
     'veryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString';
 return $var1 + $var2;
-return $var ? ($var1 ? 1 : 2) : ($var2 ? 3 : 4);
+return $var ? ( $var1 ? 1 : 2 ) : ( $var2 ? 3 : 4 );
 return 'veryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString'
     ? 'veryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString'
     : 'veryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString';
@@ -2704,7 +2720,7 @@ $var = @foo();
 
 $var = @call() || @other();
 $var = @call() || @other_class();
-$var = @(call() || call());
+$var = @( call() || call() );
 
 $var = @$cache[$key];
 $var = @$cache[$key];
@@ -2712,21 +2728,21 @@ $var = @$cache[$key];
 $var = @new MyClass();
 $var = @new MyClass();
 
-($var = @include "file.php") or die("Could not find file.php!");
+( $var = @include "file.php" ) or die("Could not find file.php!");
 
 $var = @$_GET['data'];
 
 if (
     false ===
-    @fwrite($this->stream, $message) ||
-        ($newline && false === @fwrite($this->stream, PHP_EOL))
-) {
+    @fwrite( $this->stream, $message ) ||
+        ( $newline && false === @fwrite( $this->stream, PHP_EOL ) )
+ ) {
     // should never happen
-    throw new RuntimeException('Unable to write output.');
+    throw new RuntimeException( 'Unable to write output.' );
 }
 
 try {
-    if (($fp = @fopen($filename, "r")) == false) {
+    if ( ( $fp = @fopen( $filename, "r" ) ) == false ) {
         throw new Exception();
     } else {
         do_file_stuff();
@@ -2758,20 +2774,20 @@ if (!$var) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-throw new Exception('Division by zero.');
-throw new Exception('Division by zero.');
+throw new Exception( 'Division by zero.' );
+throw new Exception( 'Division by zero.' );
 throw $e;
 throw $e;
-throw new \\Exception("Bye");
-throw new \\Exception("Bye");
+throw new \\Exception( "Bye" );
+throw new \\Exception( "Bye" );
 
-if (!$var) {
-    throw new Exception('Division by zero.');
-    throw new Exception('Division by zero.');
+if ( !$var ) {
+    throw new Exception( 'Division by zero.' );
+    throw new Exception( 'Division by zero.' );
     throw $e;
     throw $e;
-    throw new \\Exception("Bye");
-    throw new \\Exception("Bye");
+    throw new \\Exception( "Bye" );
+    throw new \\Exception( "Bye" );
 }
 
 `;
@@ -2867,10 +2883,10 @@ if (!($token = $this->getToken())) {}
 !!$var;
 
 $var = +$var;
-$var = +(+$var);
+$var = +( +$var );
 
 $var = -$var;
-$var = -(-$var);
+$var = -( -$var );
 
 $var = -+$var;
 $var = +-$var;
@@ -2881,12 +2897,12 @@ $var = ~~$var;
 $var = !$var;
 $var = !!$var;
 
-$a = (+$a) ** 1;
-$a = (+$a) ** 1;
+$a = ( +$a ) ** 1;
+$a = ( +$a ) ** 1;
 $a = 1 ** +$a;
 
-$var = call(+$a);
-$var = call(+$a);
+$var = call( +$a );
+$var = call( +$a );
 
 $var = +$foo->bar;
 
@@ -2898,17 +2914,17 @@ $var = -+$var;
 
 $var = ~+$var;
 
-$var = ~($var += 1);
-$var = ~($var += 1);
+$var = ~( $var += 1 );
+$var = ~( $var += 1 );
 
-(+$a->b)->call();
-(+$a->b)[1];
-(+$var)();
-$var = call(+$var->_uuidCounter);
+( +$a->b )->call();
+( +$a->b )[1];
+( +$var )();
+$var = call( +$var->_uuidCounter );
 
-if (!($token = $this->getToken())) {
+if ( !( $token = $this->getToken() ) ) {
 }
-if (!($token = $this->getToken())) {
+if ( !( $token = $this->getToken() ) ) {
 }
 
 `;
@@ -3021,7 +3037,7 @@ EOD;
 $var = $var;
 $var = $$var;
 
-function foo($a = 1, $b = 'string', $c = true, $d = __LINE__)
+function foo( $a = 1, $b = 'string', $c = true, $d = __LINE__ )
 {
     echo "Example function.\\n";
 }
@@ -3081,33 +3097,33 @@ function gen_one_to_three()
         yield $i;
         yield from from();
         yield from from();
-        (yield f())->b;
-        !(yield $var);
-        yield (yield $var);
+        ( yield f() )->b;
+        !( yield $var );
+        yield ( yield $var );
     }
 
     $var = yield;
-    $var = (yield $var);
-    $var += (yield $var);
-    $var = (yield $var);
-    $var += (yield $var);
-    $var = (yield $key => $var);
-    $var = (yield $key => $var);
-    $var = !(yield $var);
-    $var = !(yield $var);
-    $var = (yield (yield $var));
-    $var = (yield 1 ? 1 : 1);
-    $var = (yield 1) ? 1 : 1;
-    $var = (yield 1 ? yield 1 : yield 1);
-    $var = (yield 1) ? yield 1 : yield 1;
-    $var = (yield $var->b);
-    $var = (yield $var)->b;
-    $var = (yield $var->b());
-    $var = (yield $var)->b();
-    $var = (yield $var[1]);
-    $var = (yield $var)[1];
+    $var = ( yield $var );
+    $var += ( yield $var );
+    $var = ( yield $var );
+    $var += ( yield $var );
+    $var = ( yield $key => $var );
+    $var = ( yield $key => $var );
+    $var = !( yield $var );
+    $var = !( yield $var );
+    $var = ( yield ( yield $var ) );
+    $var = ( yield 1 ? 1 : 1 );
+    $var = ( yield 1 ) ? 1 : 1;
+    $var = ( yield 1 ? yield 1 : yield 1 );
+    $var = ( yield 1 ) ? yield 1 : yield 1;
+    $var = ( yield $var->b );
+    $var = ( yield $var )->b;
+    $var = ( yield $var->b() );
+    $var = ( yield $var )->b();
+    $var = ( yield $var[1] );
+    $var = ( yield $var )[1];
 
-    call(yield $var);
+    call( yield $var );
 
     return yield from nine_ten();
 

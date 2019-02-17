@@ -10,7 +10,7 @@ exports[`declare.php - php-verify: declare.php 1`] = `
     </body>
 </html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare(strict_types=1); ?>
+<?php declare( strict_types=1 ); ?>
 <html>
     <body>
         <?php $a = 1; ?>
@@ -466,12 +466,14 @@ echo 'bar';
 <p>Test.</p>
 <?php echo 'String.'; ?>
 <p>Test.</p>
-<?php if ($expression == true): ?>
+<?php if ( $expression == true ): ?>
   <p>Test.</p>
 <?php else: ?>
   <p>Test.</p>
 <?php endif; ?>
-<?php echo '<input type="hidden" value="' . htmlspecialchars($data) . '" />'; ?>
+<?php echo '<input type="hidden" value="' .
+    htmlspecialchars( $data ) .
+    '" />'; ?>
 <div></div>
 <?php
 echo 'foo';
@@ -485,19 +487,19 @@ echo 'bar';
 </div>
 <div id="results">
   <table class="sortable">
-    <?php $results = $statement->fetchAll(PDO::FETCH_ASSOC); ?>
+    <?php $results = $statement->fetchAll( PDO::FETCH_ASSOC ); ?>
     <?php do { ?>
       <tr>
-        <?php for ($i = 0; $i < count($columns); $i++): ?>
+        <?php for ($i = 0; $i < count( $columns ); $i++): ?>
           <td><?php echo $row[$i]; ?></td>
         <?php endfor; ?>
       </tr>
-    <?php } while (($row = next($results)) != false); ?>
+    <?php } while (( $row = next( $results ) ) != false); ?>
   </table>
 </div>
 <div id="results">
   <table class="sortable">
-    <?php foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $row): ?>
+    <?php foreach ($statement->fetchAll( PDO::FETCH_ASSOC ) as $row): ?>
       <tr>
         <?php foreach ($row as $element): ?>
           <td><?php echo $element; ?></td>
@@ -525,7 +527,7 @@ echo 'bar';
 <?php endwhile; ?>
 <h1>Head</h1>
 <?php $var = 1; ?>
-<?php if ($expression == true): ?>
+<?php if ( $expression == true ): ?>
   <p>Test.</p>
 <?php else: ?>
   <p>Test.</p>
@@ -538,9 +540,9 @@ echo 'bar';
   <?php endwhile; ?>
 </div>
 <div>
-  <?php if ($a > $b): ?>
+  <?php if ( $a > $b ): ?>
     <span><?php echo $a . " > " . $b; ?></span>
-  <?php elseif ($a == $b): ?>
+  <?php elseif ( $a == $b ): ?>
     <span><?php echo $a . " == " . $b; ?></span>
   <?php else: ?>
     <span><?php echo $a . " < " . $b; ?></span>
@@ -581,7 +583,7 @@ exports[`mixed-3.php - php-verify: mixed-3.php 1`] = `
 <?php endif; ?>
 <div>Hello world</div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php if ($expression == true): ?>
+<?php if ( $expression == true ): ?>
     <p>Test.</p>
 <?php else: ?>
     <p>Test.</p>
@@ -599,7 +601,7 @@ exports[`mixed-4.php - php-verify: mixed-4.php 1`] = `
 <?php endif; ?>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <div>Hello world</div>
-<?php if ($expression == true): ?>
+<?php if ( $expression == true ): ?>
     <p>Test.</p>
 <?php else: ?>
     <p>Test.</p>
@@ -625,15 +627,18 @@ if (!empty($dataXXXXXXXXXXXXXXXXXXXX)) {
 ?>
 text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 text
-<?php if (!empty($dataXXXXXXXXXXXXXXXXXXXX)) {
+<?php if ( !empty( $dataXXXXXXXXXXXXXXXXXXXX ) ) {
     foreach ($dataXXXXXXXXXXXXXXXXXXXX as $key => $value) {
-        if ((!is_string($value) && !is_numeric($value)) || !is_string($key)) {
+        if (
+            ( !is_string( $value ) && !is_numeric( $value ) ) ||
+            !is_string( $key )
+         ) {
             continue;
         }
-        if (get_magic_quotes_gpc()) {
-            $value = htmlspecialchars(stripslashes((string) $value));
+        if ( get_magic_quotes_gpc() ) {
+            $value = htmlspecialchars( stripslashes( (string) $value ) );
         } else {
-            $value = htmlspecialchars((string) $value);
+            $value = htmlspecialchars( (string) $value );
         }
     }
 } ?>
@@ -677,7 +682,7 @@ exports[`mixed-6.php - php-verify: mixed-6.php 1`] = `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <section class="<?= $sectionClass; ?>">
   <header class="<?= $headerClass; ?>">
-    <?php echo $this->element('collection/item-title', [
+    <?php echo $this->element( 'collection/item-title', [
         'class' => $itemTitleClass,
         'small_title' => $item->small_title,
         'title' => $item->title,
@@ -689,14 +694,14 @@ exports[`mixed-6.php - php-verify: mixed-6.php 1`] = `
 
 <section class="<?= $sectionClass; ?>">
   <header class="<?= $headerClass; ?>">
-    <?php echo $this->element('collection/item-title', [
+    <?php echo $this->element( 'collection/item-title', [
         'class' => $itemTitleClass,
         'small_title' => $item->small_title,
         'title' => $item->title,
         'url' => $url,
         'color' => $item->title_color ?: 'primary'
     ]); ?>
-  </header> <?= $someOtherVar()->element('collection/item-title', [
+  </header> <?= $someOtherVar()->element( 'collection/item-title', [
       'class' => $itemTitleClass,
       'small_title' => $item->small_title,
       'title' => $item->title,
@@ -826,11 +831,11 @@ exports[`mixed-8.php - php-verify: mixed-8.php 1`] = `
 
 <div>
     <?php
-    function func($x)
+    function func( $x )
     {
         return $x;
     }
-    function other_func($x)
+    function other_func( $x )
     {
         return $x;
     }
@@ -838,11 +843,11 @@ exports[`mixed-8.php - php-verify: mixed-8.php 1`] = `
 </div>
 
 <div>
-    <?php function func($x)
+    <?php function func( $x )
     {
         return $x;
     } ?>
-    <?php function other_func($x)
+    <?php function other_func( $x )
     {
         return $x;
     } ?>
@@ -1084,7 +1089,7 @@ $greet = function($name) {
 };
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-$greet = function ($name) {
+$greet = function ( $name ) {
     ?>
     FooBar
     <?php
@@ -1158,7 +1163,7 @@ exports[`mixed-22.php - php-verify: mixed-22.php 1`] = `
     <p>Test.</p>
 <?php endif; ?>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php if ($expression == true): ?>
+<?php if ( $expression == true ): ?>
     <p>Test.</p>
 <?php else: ?>
     <p>Test.</p>
@@ -1247,7 +1252,7 @@ echo 'test';
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace Foo;
 
@@ -1316,11 +1321,11 @@ exports[`mixed-32.php - php-verify: mixed-32.php 1`] = `
 <div></div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <div></div>
-<?php if (true); ?>
+<?php if ( true ); ?>
     <?php echo 'test'; ?>
 <div></div>
 <div></div>
-<?php if (true); ?>
+<?php if ( true ); ?>
 <?php echo 'test'; ?>
 <div></div>
 
@@ -1335,7 +1340,7 @@ if (true)
 <div></div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <div></div>
-<?php if (true) {
+<?php if ( true ) {
     echo 'test';
 } ?>
 <div></div>
@@ -1348,7 +1353,7 @@ exports[`mixed-34.php - php-verify: mixed-34.php 1`] = `
 <div></div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <div></div>
-<?php if (true) {
+<?php if ( true ) {
     echo 'test';
 } ?>
 <div></div>
@@ -1416,37 +1421,37 @@ function testTwo()
     <?php
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php if (!is_ajax()) { ?>
-    <?php do_action('woocommerce_review_order_after_payment'); ?>
+<?php if ( !is_ajax() ) { ?>
+    <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
 <?php } ?>
 
-<?php if (!is_ajax()) { ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+<?php if ( !is_ajax() ) { ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
 <?php } ?>
 
-<?php if (!is_ajax()) { ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+<?php if ( !is_ajax() ) { ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
-    <?php do_action('woocommerce_review_order_after_payment'); ?>
+    <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
 <?php } ?>
 
-<?php if (!is_ajax()) { ?>
-    <?php do_action('woocommerce_review_order_after_payment'); ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+<?php if ( !is_ajax() ) { ?>
+    <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
 <?php } ?>
 
-<?php if (!is_ajax()) { ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+<?php if ( !is_ajax() ) { ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
-    <?php do_action('woocommerce_review_order_after_payment'); ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+    <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
 <?php } ?>
 
@@ -1454,21 +1459,21 @@ function testTwo()
 function test()
 {
     ?>
-    <?php if (!is_ajax()) { ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
     <?php } ?>
     <?php
 }
 function testTwo()
 {
     ?>
-    <?php if (!is_ajax()) { ?>
-        <?php if (!is_ajax()) { ?>
-            <?php do_action('woocommerce_review_order_after_payment'); ?>
+    <?php if ( !is_ajax() ) { ?>
+        <?php if ( !is_ajax() ) { ?>
+            <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
         <?php } ?>
-        <?php do_action('woocommerce_review_order_after_payment'); ?>
-        <?php if (!is_ajax()) { ?>
-            <?php do_action('woocommerce_review_order_after_payment'); ?>
+        <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
+        <?php if ( !is_ajax() ) { ?>
+            <?php do_action( 'woocommerce_review_order_after_payment' ); ?>
         <?php } ?>
     <?php } ?>
     <?php
@@ -1498,15 +1503,17 @@ exports[`mixed-36.php - php-verify: mixed-36.php 1`] = `
     <div>
         <div>
             <div>
-                <input id="payment_method_<?php echo esc_attr($gateway->id); ?>"
+                <input id="payment_method_<?php echo esc_attr(
+                    $gateway->id
+                 ); ?>"
                     type="radio"
                     class="input-radio"
                     name="payment_method"
-                    value="<?php echo esc_attr($gateway->id); ?>"
-                    <?php checked($gateway->chosen, true); ?>
+                    value="<?php echo esc_attr( $gateway->id ); ?>"
+                    <?php checked( $gateway->chosen, true ); ?>
                     data-text="<?php echo esc_attr(
                         $gateway->order_button_text
-                    ); ?>"
+                     ); ?>"
             </div>
         </div>
     </div>
@@ -1570,7 +1577,7 @@ func(
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-); ?>
+ ); ?>
 </div>
 
 <div>
@@ -1578,7 +1585,7 @@ func(
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-); ?>
+ ); ?>
 </div>
 
 <div>
@@ -1586,7 +1593,7 @@ func(
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg',
     'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-); ?>
+ ); ?>
 </div>
 
 <div>
@@ -1594,7 +1601,7 @@ func(
       'verVeryVeryVeryVeryVeryVeryVeryLongArg',
       'verVeryVeryVeryVeryVeryVeryVeryLongArg',
       'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-  ); ?>
+   ); ?>
 </div>
 
 <div>
@@ -1602,7 +1609,7 @@ func(
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-    ); ?>
+     ); ?>
 </div>
 
 <div>
@@ -1610,7 +1617,7 @@ func(
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-    ); ?>
+     ); ?>
 </div>
 
 <div>
@@ -1618,7 +1625,7 @@ func(
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg',
         'verVeryVeryVeryVeryVeryVeryVeryLongArg'
-    ); ?>
+     ); ?>
 </div>
 
 `;
@@ -1708,7 +1715,7 @@ $var = 2;
 <div></div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare(strict_types=1);
+declare( strict_types=1 );
 $var = 1;
 $var = 2;
 ?>
@@ -1728,7 +1735,7 @@ $var = 2;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 $var = 1;
 $var = 2;
@@ -1751,7 +1758,7 @@ $var = 2;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 $var = 1;
 $var = 2;
@@ -1831,7 +1838,7 @@ $var = 2;
 <div></div>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare(strict_types=1);
+declare( strict_types=1 );
 namespace Vendor\\Package;
 $var = 1;
 $var = 2;
@@ -1854,7 +1861,7 @@ $var = 2;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace Vendor\\Package;
 
@@ -1882,7 +1889,7 @@ $var = 2;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace Vendor\\Package;
 

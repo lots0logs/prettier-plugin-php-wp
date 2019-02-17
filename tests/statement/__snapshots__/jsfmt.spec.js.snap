@@ -17,7 +17,7 @@ class Test
     {
     }
 }
-if (true) {
+if ( true ) {
     echo 'good';
 }
 

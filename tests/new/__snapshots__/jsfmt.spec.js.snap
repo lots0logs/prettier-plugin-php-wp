@@ -196,7 +196,7 @@ new Foo();
 new Foo();
 $a = new Foo();
 $b = new Foo();
-$c = new Foo([1, 2, 3], "foo", $variable);
+$c = new Foo( [1, 2, 3], "foo", $variable );
 $bar = 'MyClassName';
 $foo = new $bar();
 $foo = new $bar();
@@ -210,32 +210,32 @@ abstract class A
     }
 }
 
-$class = (new Foo())->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMethod();
-$class = (new Foo([
+$class = ( new Foo() )->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMethod();
+$class = ( new Foo( [
     'VeryVeryVeryVeryVeryVeryVeryVeryVeryLongKey' =>
         'VeryVeryVeryVeryVeryVeryVeryVeryVeryLongValue'
-]))->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMethod();
-$class = (new PendingDispatch(new $this->class(...func_get_args())))->chain(
-    $this->chain
-);
-$dumper = in_array(PHP_SAPI, ['cli', 'phpdbg'])
+]) )->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMethod();
+$class = ( new PendingDispatch(
+    new $this->class( ...func_get_args() )
+ ) )->chain( $this->chain );
+$dumper = in_array( PHP_SAPI, ['cli', 'phpdbg'] )
     ? new CliDumper()
     : new HtmlDumper();
 $class = new static(
     'Error encoding model [' .
-        get_class($model) .
+        get_class( $model ) .
         '] with ID [' .
         $model->getKey() .
         '] to JSON: ' .
         $message
-);
+ );
 $response = new \\Illuminate\\Http\\JsonResponse(
     new JsonResponseTestJsonSerializeObject()
-);
-$result = (new Pipeline(new \\Illuminate\\Container\\Container()))
-    ->send('foo')
-    ->through([new PipelineTestPipeOne()])
-    ->then(function ($piped) {
+ );
+$result = ( new Pipeline( new \\Illuminate\\Container\\Container() ) )
+    ->send( 'foo' )
+    ->through( [new PipelineTestPipeOne()] )
+    ->then( function ( $piped ) {
         return $piped;
     });
 
@@ -300,14 +300,14 @@ EOF
 );
 
 $var = new class {
-    public function log($msg)
+    public function log( $msg )
     {
         echo $msg;
     }
 };
 setLogger(
     new class {
-        public function log($msg)
+        public function log( $msg )
         {
             echo $msg;
         }
@@ -322,8 +322,8 @@ $var = new class(
     function () {
         return 1;
     }
-) extends SomeClass implements SomeInterface {
-    public function log($msg)
+ ) extends SomeClass implements SomeInterface {
+    public function log( $msg )
     {
         echo $msg;
     }
@@ -336,7 +336,7 @@ class A
 {
     public function create1()
     {
-        $class = get_class($this);
+        $class = get_class( $this );
         return new $class();
     }
     public function create2()
@@ -345,7 +345,7 @@ class A
     }
     public function create3()
     {
-        return new static($arg, $arg, $arg);
+        return new static( $arg, $arg, $arg );
     }
 }
 
@@ -406,10 +406,10 @@ string
 string'
 ) {};
 
-$var = new class(10) extends SomeClass implements SomeInterface {
+$var = new class( 10 ) extends SomeClass implements SomeInterface {
     private $num;
 
-    public function __construct($num)
+    public function __construct( $num )
     {
         $this->num = $num;
     }

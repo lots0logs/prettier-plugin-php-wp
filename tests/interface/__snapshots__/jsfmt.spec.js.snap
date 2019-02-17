@@ -34,13 +34,13 @@ interface VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongCl
 
 interface testInterface
 {
-    public function setVariable($test);
-    public function method(array $array): iterable;
+    public function setVariable( $test );
+    public function method( array $array ): iterable;
 }
 
 interface test2 extends testInterface
 {
-    public function other($hi);
+    public function other( $hi );
 }
 
 interface EmptyInterface

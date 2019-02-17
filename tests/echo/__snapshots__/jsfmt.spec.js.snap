@@ -219,13 +219,18 @@ echo $foo, $bar; // foobarbarbaz
 
 // Strings can either be passed individually as multiple arguments or
 // concatenated together and passed as a single argument
-echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters.', chr(10);
 echo 'This ',
     'string ',
     'was ',
     'made ',
     'with multiple parameters.',
-    chr(10),
+    chr( 10 );
+echo 'This ',
+    'string ',
+    'was ',
+    'made ',
+    'with multiple parameters.',
+    chr( 10 ),
     'and',
     'other',
     'long',
@@ -289,7 +294,7 @@ echo 1000000000,
     $foo ? true : false;
 echo 1000000000 . 'String',
     $object->property + $object->method(),
-    method(method('string')),
+    method( method( 'string' ) ),
     $foo ? $bar . 'foo' . 'test' : false;
 
 echo $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable->veryVeryVeryVeryVeryVeryLongProperty;
@@ -299,14 +304,14 @@ echo 1;
 echo 1;
 echo 1, 1;
 
-echo ("The sum is " . 1) | 2; // output: "2". Parentheses needed.
+echo ( "The sum is " . 1 ) | 2; // output: "2". Parentheses needed.
 echo "The sum is ", 1 | 2; // output: "The sum is 3". Fine.
 
-echo "Foo" . f("bar") . "Foo";
+echo "Foo" . f( "bar" ) . "Foo";
 echo "\\n\\n";
-echo "Foo", f("bar"), "Foo";
+echo "Foo", f( "bar" ), "Foo";
 
-echo "Loop start!\\n", sleep(1);
+echo "Loop start!\\n", sleep( 1 );
 
 echo esc_html(
     sprintf(
@@ -314,30 +319,30 @@ echo esc_html(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-);
+         ),
+        get_option( 'blogname' )
+     )
+ );
 echo esc_html(
     sprintf(
         __(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-) . "\\n\\n";
+         ),
+        get_option( 'blogname' )
+     )
+ ) . "\\n\\n";
 echo esc_html(
     sprintf(
         __(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-) . "\\n\\n",
+         ),
+        get_option( 'blogname' )
+     )
+ ) . "\\n\\n",
     "string";
 echo esc_html(
     sprintf(
@@ -345,10 +350,10 @@ echo esc_html(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-) . "\\n\\n",
+         ),
+        get_option( 'blogname' )
+     )
+ ) . "\\n\\n",
     "string" .
         "veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString";
 echo esc_html(
@@ -357,10 +362,10 @@ echo esc_html(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-),
+         ),
+        get_option( 'blogname' )
+     )
+ ),
     "string",
     "string";
 echo esc_html(
@@ -369,30 +374,30 @@ echo esc_html(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-),
+         ),
+        get_option( 'blogname' )
+     )
+ ),
     esc_html(
         sprintf(
             __(
                 'Hi there. Your recent order on %s has been completed. ' .
                     'Your order details are shown below for your reference:',
                 'woocommerce'
-            ),
-            get_option('blogname')
-        )
-    );
+             ),
+            get_option( 'blogname' )
+         )
+     );
 echo esc_html(
     sprintf(
         __(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-        ),
-        get_option('blogname')
-    )
-),
+         ),
+        get_option( 'blogname' )
+     )
+ ),
     "string",
     esc_html(
         sprintf(
@@ -400,10 +405,10 @@ echo esc_html(
                 'Hi there. Your recent order on %s has been completed. ' .
                     'Your order details are shown below for your reference:',
                 'woocommerce'
-            ),
-            get_option('blogname')
-        )
-    );
+             ),
+            get_option( 'blogname' )
+         )
+     );
 
 echo <<<EOD
 Example of string
