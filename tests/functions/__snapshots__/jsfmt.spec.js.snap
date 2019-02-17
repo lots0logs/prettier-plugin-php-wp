@@ -178,17 +178,17 @@ function hello()
     return "hello";
 }
 
-function return_x( $x )
+function return_x($x)
 {
     return $x;
 }
 
-function two_args( $x, $y )
+function two_args($x, $y)
 {
     return $x;
 }
 
-function two_args_other( $x, $y, $z, $foo, $bar )
+function two_args_other($x, $y, $z, $foo, $bar)
 {
     return $x;
 }
@@ -196,18 +196,18 @@ function two_args_other( $x, $y, $z, $foo, $bar )
 function reeeeeeeeeeaaaaaaaallllllllyyyyyy_llloooooooonnnnnnggggg(
     $soooooooooooo_looooooooonnnng,
     $eeeeeeeeevvveeeeeeeennnn_loooooonnngggeeeerrrr
- ) {
+) {
     return $soooooooooooo_looooooooonnnng;
 }
 
-function variadicTest( $one, ...$others )
+function variadicTest($one, ...$others)
 {
     // test
     $hi = 2;
-    return count( $others );
+    return count($others);
 }
 
-function pass_by_reference_test( $x, int &$a )
+function pass_by_reference_test($x, int &$a)
 {
     $a += 1;
 }
@@ -220,12 +220,12 @@ function type_hinting_test(
     iterable $iterable_test,
     int $int_test,
     string $string_test = ''
- ) {
+) {
     return $int_test;
 }
 
-$anonymous = function ( $name ) use ( $otherthing, &$reference_test ) {
-    printf( "Hello %s", $name );
+$anonymous = function ($name) use ($otherthing, &$reference_test) {
+    printf("Hello %s", $name);
     $reference_test += 1;
 };
 $anonymousLongVariableName = function (
@@ -233,12 +233,12 @@ $anonymousLongVariableName = function (
     $more,
     $params,
     $looooooooooooooooooooooooooooooooong
- ) use ( $all, $kinds, $of, $stuff ) {
-    printf( "Hello %s", $name );
+) use ($all, $kinds, $of, $stuff) {
+    printf("Hello %s", $name);
 };
 
 $arr = [1, 2, 3];
-array_map( function ( $entry ) {
+array_map(function ($entry) {
     return $entry * 2;
 }, $arr);
 
@@ -255,7 +255,7 @@ function &passByReferenceTest()
     return $a;
 }
 
-function foo( iterable $iterable = [] )
+function foo(iterable $iterable = [])
 {
 }
 
@@ -271,14 +271,14 @@ function gen(): iterable
     yield 3;
 }
 
-function testReturn( ?string $name ): ?string
+function testReturn(?string $name): ?string
 {
     return $name;
 }
 
-function swap( &$left, &$right ): void
+function swap(&$left, &$right): void
 {
-    if ( $left === $right ) {
+    if ($left === $right) {
         return;
     }
 
@@ -287,7 +287,7 @@ function swap( &$left, &$right ): void
     $right = $tmp;
 }
 
-function test( object $obj ): object
+function test(object $obj): object
 {
     return new SplQueue();
 }
@@ -309,8 +309,8 @@ function the_panel_title(
     $data_livetext = false,
     $depth = 0,
     $index = 0
- ) {
-    if ( empty( $title ) && !is_panel_preview() ) {
+) {
+    if (empty($title) && !is_panel_preview()) {
         return "";
     }
 
@@ -336,7 +336,7 @@ abstract class AbstractClass
         $data_livetext = false,
         $depth = 0,
         $index = 0
-     );
+    );
 }
 
 class Foo
@@ -350,7 +350,7 @@ class Foo
     public function otherShortName()
     {
     }
-    public function otherOtherShortName( $arg )
+    public function otherOtherShortName($arg)
     {
     }
     public function shortNameAndBreak(
@@ -360,7 +360,7 @@ class Foo
         $data_livetext = false,
         $depth = 0,
         $index = 0
-     ) {
+    ) {
     }
     public function veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName()
     {
@@ -373,7 +373,7 @@ class Foo
     }
     public function otherOtherVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
         $arg
-     ) {
+    ) {
     }
     public function veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongNameAndBreak(
         $title = null,
@@ -382,7 +382,7 @@ class Foo
         $data_livetext = false,
         $depth = 0,
         $index = 0
-     ) {
+    ) {
     }
 }
 

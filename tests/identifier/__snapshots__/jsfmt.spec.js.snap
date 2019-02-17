@@ -207,59 +207,59 @@ $foo::nUlL();
 
 // Functions
 
-function int( int $var ): int
+function int(int $var): int
 {
 }
-function intI( int $var ): int
-{
-}
-
-function float( float $var ): float
-{
-}
-function floatI( float $var ): float
+function intI(int $var): int
 {
 }
 
-function bool( bool $var ): bool
+function float(float $var): float
 {
 }
-function boolI( bool $var ): bool
-{
-}
-
-function string( string $var ): string
-{
-}
-function stringI( string $var ): string
+function floatI(float $var): float
 {
 }
 
-function iterable( iterable $var ): iterable
+function bool(bool $var): bool
 {
 }
-function iterableI( iterable $var ): iterable
-{
-}
-
-function object( object $var ): object
-{
-}
-function objectI( object $var ): object
+function boolI(bool $var): bool
 {
 }
 
-function arrayI( array $var ): array
+function string(string $var): string
 {
 }
-function arrayI( array $var ): array
+function stringI(string $var): string
 {
 }
 
-function callableI( callable $var ): callable
+function iterable(iterable $var): iterable
 {
 }
-function callableII( callable $var ): callable
+function iterableI(iterable $var): iterable
+{
+}
+
+function object(object $var): object
+{
+}
+function objectI(object $var): object
+{
+}
+
+function arrayI(array $var): array
+{
+}
+function arrayI(array $var): array
+{
+}
+
+function callableI(callable $var): callable
+{
+}
+function callableII(callable $var): callable
 {
 }
 
@@ -270,54 +270,54 @@ function voidI(): void
 {
 }
 
-function null( $var = null )
+function null($var = null)
 {
 }
-function nullII( $var = null )
+function nullII($var = null)
 {
 }
 
-function something( something $var ): something
+function something(something $var): something
 {
 }
-function somethingI( sOmEtHiNg $var ): sOmEtHiNg
+function somethingI(sOmEtHiNg $var): sOmEtHiNg
 {
 }
 
 // Closures
 
-$var = function ( int $var ): int {};
-$var = function ( int $var ): int {};
+$var = function (int $var): int {};
+$var = function (int $var): int {};
 
-$var = function ( float $var ): float {};
-$var = function ( float $var ): float {};
+$var = function (float $var): float {};
+$var = function (float $var): float {};
 
-$var = function ( bool $var ): bool {};
-$var = function ( bool $var ): bool {};
+$var = function (bool $var): bool {};
+$var = function (bool $var): bool {};
 
-$var = function ( string $var ): string {};
-$var = function ( string $var ): string {};
+$var = function (string $var): string {};
+$var = function (string $var): string {};
 
-$var = function ( iterable $var ): iterable {};
-$var = function ( iterable $var ): iterable {};
+$var = function (iterable $var): iterable {};
+$var = function (iterable $var): iterable {};
 
-$var = function ( object $var ): object {};
-$var = function ( object $var ): object {};
+$var = function (object $var): object {};
+$var = function (object $var): object {};
 
-$var = function ( array $var ): array {};
-$var = function ( array $var ): array {};
+$var = function (array $var): array {};
+$var = function (array $var): array {};
 
-$var = function ( callable $var ): callable {};
-$var = function ( callable $var ): callable {};
+$var = function (callable $var): callable {};
+$var = function (callable $var): callable {};
 
 $var = function (): void {};
 $var = function (): void {};
 
-$var = function ( $var = null ) {};
-$var = function ( $var = null ) {};
+$var = function ($var = null) {};
+$var = function ($var = null) {};
 
-$var = function ( something $var ): something {};
-$var = function ( sOmEtHiNg $var ): sOmEtHiNg {};
+$var = function (something $var): something {};
+$var = function (sOmEtHiNg $var): sOmEtHiNg {};
 
 class A
 {
@@ -355,73 +355,73 @@ class A
         return $this;
     }
 
-    public function foo( self $arg )
+    public function foo(self $arg)
     {
     }
-    public function foo2( self $arg )
+    public function foo2(self $arg)
     {
     }
-    public function foo3( parent $arg )
+    public function foo3(parent $arg)
     {
     }
-    public function foo4( parent $arg )
+    public function foo4(parent $arg)
     {
     }
 
     // methods
-    function int( int $var ): int
+    function int(int $var): int
     {
     }
-    function intI( int $var ): int
-    {
-    }
-
-    function float( float $var ): float
-    {
-    }
-    function floatI( float $var ): float
+    function intI(int $var): int
     {
     }
 
-    function bool( bool $var ): bool
+    function float(float $var): float
     {
     }
-    function boolI( bool $var ): bool
-    {
-    }
-
-    function string( string $var ): string
-    {
-    }
-    function stringI( string $var ): string
+    function floatI(float $var): float
     {
     }
 
-    function iterable( iterable $var ): iterable
+    function bool(bool $var): bool
     {
     }
-    function iterableI( iterable $var ): iterable
-    {
-    }
-
-    function object( object $var ): object
-    {
-    }
-    function objectI( object $var ): object
+    function boolI(bool $var): bool
     {
     }
 
-    function arrayI( array $var ): array
+    function string(string $var): string
     {
     }
-    function arrayI( array $var ): array
+    function stringI(string $var): string
     {
     }
 
-    function callableI( callable $var ): callable
+    function iterable(iterable $var): iterable
     {
     }
-    function callableII( callable $var ): callable
+    function iterableI(iterable $var): iterable
+    {
+    }
+
+    function object(object $var): object
+    {
+    }
+    function objectI(object $var): object
+    {
+    }
+
+    function arrayI(array $var): array
+    {
+    }
+    function arrayI(array $var): array
+    {
+    }
+
+    function callableI(callable $var): callable
+    {
+    }
+    function callableII(callable $var): callable
     {
     }
 
@@ -432,17 +432,17 @@ class A
     {
     }
 
-    function null( $var = null )
+    function null($var = null)
     {
     }
-    function nullII( $var = null )
+    function nullII($var = null)
     {
     }
 
-    function something( something $var ): something
+    function something(something $var): something
     {
     }
-    function somethingI( sOmEtHiNg $var ): sOmEtHiNg
+    function somethingI(sOmEtHiNg $var): sOmEtHiNg
     {
     }
 }
@@ -459,10 +459,10 @@ $var = $var === null;
 $var = $var === null;
 $var = $array[null];
 $var = $array[null];
-$var = call( null );
-$var = call( null );
-$var = new Foo( null );
-$var = new Foo( null );
+$var = call(null);
+$var = call(null);
+$var = new Foo(null);
+$var = new Foo(null);
 $var = [null];
 $var = [null];
 $var = ['foo' => null];

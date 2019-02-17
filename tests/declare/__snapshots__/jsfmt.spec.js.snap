@@ -33,22 +33,22 @@ enddeclare;
 declare(ticks=1):
     $test = 1;
 enddeclare;
-declare( ticks=1 );
+declare(ticks=1);
 $test = 1;
 declare(ticks=1) {
     $test = 1;
 }
-declare( encoding='ISO-8859-1' );
+declare(encoding='ISO-8859-1');
 $test = 1;
 declare(ticks=1):
     $test = 1;
 enddeclare;
 
-declare( ticks=1 );
+declare(ticks=1);
 $test = 1;
 
-if ( $var ) {
-    declare( ticks=1 );
+if ($var) {
+    declare(ticks=1);
 }
 
 declare(ticks=1) {
@@ -66,7 +66,7 @@ declare(unknown=1);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( unknown=1 );
+declare(unknown=1);
 
 `;
 
@@ -115,7 +115,7 @@ function test() {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 $a = 1;
 $b = 2;
@@ -134,7 +134,7 @@ declare(ticks=1);
 $a = 1;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare( ticks=1 );
+declare(ticks=1);
 
 $a = 1;
 
@@ -149,7 +149,7 @@ $a = 1;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 $a = 1;
 
@@ -164,7 +164,7 @@ namespace Foo;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 namespace Foo;
 
@@ -177,7 +177,7 @@ declare(ticks=1);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 `;
 
@@ -189,7 +189,7 @@ namespace Foo;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 namespace Foo;
 
 `;
@@ -200,7 +200,7 @@ declare(ticks=1);
 namespace Foo;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare( ticks=1 );
+declare(ticks=1);
 namespace Foo;
 
 `;
@@ -214,7 +214,7 @@ For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 EOF;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 );
+<?php declare(strict_types=1);
 $header = <<<'EOF'
 This file is part of sebastian/diff.
 (c) Sebastian Bergmann <sebastian@phpunit.de>
@@ -229,14 +229,14 @@ exports[`declare-on-next-line-after-open-php-tag.php - php-verify: declare-on-ne
 declare(ticks=1);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
-declare( ticks=1 );
+declare(ticks=1);
 
 `;
 
 exports[`declare-on-same-line-with-open-php-tag.php - php-verify: declare-on-same-line-with-open-php-tag.php 1`] = `
 <?php declare(ticks=1);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( ticks=1 );
+<?php declare(ticks=1);
 
 `;
 
@@ -244,7 +244,7 @@ exports[`declare-on-same-line-with-open-php-tag-with-namespace.php - php-verify:
 <?php declare(ticks=1);
 namespace Foo;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( ticks=1 );
+<?php declare(ticks=1);
 namespace Foo;
 
 `;
@@ -260,7 +260,7 @@ namespace Foo;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 namespace Foo;
 
@@ -280,7 +280,7 @@ $a = 1;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 namespace Foo;
 
@@ -305,7 +305,7 @@ $a = 1;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( ticks=1 );
+declare(ticks=1);
 
 namespace Foo;
 
@@ -327,7 +327,7 @@ declare (ticks=2) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-declare( strict_types=1 );
+declare(strict_types=1);
 declare(ticks=1) {
     foo();
 }

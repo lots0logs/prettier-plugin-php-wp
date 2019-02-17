@@ -106,7 +106,7 @@ function test()
 
 \`\`\`php
 <?php
-if ( $foo ) {
+if ($foo) {
   echo "bar";
 }
 \`\`\`
@@ -118,8 +118,8 @@ include './i.php';
 require './2.php';
 
 $files = get_included_files();
-var_dump( $files_list );
-var_dump( get_required_files() );
+var_dump($files_list);
+var_dump(get_required_files());
 \`\`\`
 
 \`\`\`php
@@ -128,8 +128,8 @@ include './i.php';
 require './2.php';
 
 $files = get_included_files();
-var_dump( $files_list );
-var_dump( get_required_files() );
+var_dump($files_list);
+var_dump(get_required_files());
 \`\`\`
 
 \`\`\`php
@@ -156,7 +156,7 @@ $c = 3;
 test
 <?php
 echo 'foo';
-if ( true ) {
+if (true) {
   echo 'test';
 }
 echo 'bar';

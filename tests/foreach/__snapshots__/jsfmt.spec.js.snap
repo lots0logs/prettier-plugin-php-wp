@@ -118,7 +118,7 @@ foreach ($test as $i) {
 }
 
 foreach ($points as ["x" => $x, "y" => $y]) {
-    var_dump( $x, $y );
+    var_dump($x, $y);
 }
 
 foreach (
@@ -128,7 +128,7 @@ foreach (
         "veryVeryVeryVeryVeryVeryVeryLongKey" => $y
     ]
 ) {
-    var_dump( $x, $y );
+    var_dump($x, $y);
 }
 
 foreach (
@@ -138,7 +138,7 @@ foreach (
         "y" => $veryVeryVeryVeryVeryVeryVeryVeryLongValue
     ]
 ) {
-    var_dump( $x, $y );
+    var_dump($x, $y);
 }
 
 foreach (
@@ -148,7 +148,7 @@ foreach (
         "veryVeryVeryVeryVeryVeryVeryLongKey" => $veryVeryVeryVeryVeryVeryVeryVeryLongY
     ]
 ) {
-    var_dump( $x, $y );
+    var_dump($x, $y);
 }
 
 foreach (

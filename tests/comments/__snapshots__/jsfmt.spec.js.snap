@@ -201,7 +201,7 @@ call(
     array() // Comment
 );
 
-call( array(
+call(array(
     // Comment
     'string',
     'other-string'
@@ -371,16 +371,15 @@ $bool = /*Comment */ true /*Comment */ || /*Comment */ false /*Comment */;
 
 $variable =
     // arrays, countables
-    FormUtil::isEmpty( $this->modelData ) ||
-    ( ( is_array( $this->modelData ) ||
-        $this->modelData instanceof \\Countable ) &&
-        0 === count( $this->modelData ) ) ||
+    FormUtil::isEmpty($this->modelData) ||
+    ((is_array($this->modelData) || $this->modelData instanceof \\Countable) &&
+        0 === count($this->modelData)) ||
     // traversables that are not countable
-    ( $this->modelData instanceof \\Traversable &&
-        0 === iterator_count( $this->modelData ) );
+    ($this->modelData instanceof \\Traversable &&
+        0 === iterator_count($this->modelData));
 
-if ( 2 /* MB_OVERLOAD_STRING */ & (int) ini_get( 'mbstring.func_overload' ) ) {
-    mb_internal_encoding( 'ASCII' );
+if (2 /* MB_OVERLOAD_STRING */ & (int) ini_get('mbstring.func_overload')) {
+    mb_internal_encoding('ASCII');
 }
 
 $bool = /*Comment */ true /*Comment */ || /*Comment */ false /*Comment */;
@@ -480,7 +479,7 @@ foo(
     /* Comment */ $a /* Comment */,
     /* Comment */ [] /* Comment */,
     /* Comment */ $a + 2 /* Comment */
- );
+);
 foo(/* A */);
 $foo->bar(/* B */);
 
@@ -705,7 +704,7 @@ class Foo extends Bar implements Baz, Buzz
     }
 }
 
-return new class( $this->taxonomy, $this->post_types ) extends Taxonomy_Config {
+return new class($this->taxonomy, $this->post_types) extends Taxonomy_Config {
     // body of anonymous class
     public function get_args()
     {
@@ -714,7 +713,7 @@ return new class( $this->taxonomy, $this->post_types ) extends Taxonomy_Config {
     } // after member function on anonymous class
 };
 
-$test = new class( $arg1 ) extends Test {
+$test = new class($arg1) extends Test {
     // some comment
 };
 
@@ -939,7 +938,7 @@ $var = function () {
 <?php
 
 $var = function (/* Comment */) {};
-$var = function ( /* Comment */ $arg /* Comment */ ) {};
+$var = function (/* Comment */ $arg /* Comment */) {};
 $var = function () {
     // this is a function
     return 42;
@@ -1160,7 +1159,7 @@ class Foo
      *
      * @return void
      */
-    public function setTitle( $title )
+    public function setTitle($title)
     {
         // there should be no docblock here
         $this->title = $title;
@@ -1205,19 +1204,19 @@ do {
 
 $test =
     foo ?:
-    bar( function () {
+    bar(function () {
         $foo = "bar";
         // test
     });
 
 $test = foo
     ? true
-    : bar( function () {
+    : bar(function () {
         $foo = "bar";
         // test
     });
 
-$constraint = new UniqueEntity( array(
+$constraint = new UniqueEntity(array(
     'message' => 'myMessage'
     // no "em" option set
 ));
@@ -1364,7 +1363,7 @@ declare(ticks=1) {
 }
 
 // Comment
-declare( ticks=1 );
+declare(ticks=1);
 // Comment
 
 // Comment
@@ -1400,7 +1399,7 @@ declare(ticks=1) {
 declare(ticks=/* Comment */ /* Comment */ /* Comment */ /* Comment */ 1 /* Comment */) {
 }
 
-declare( strict_types=1 ); // Comment
+declare(strict_types=1); // Comment
 
 `;
 
@@ -1441,7 +1440,7 @@ use PHPUnit_Framework_TestCase;
  * @author Marc Morera <yuhu@mmoreram.com>
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 
@@ -1480,7 +1479,7 @@ use PHPUnit_Framework_TestCase;
  *
  * @author Marc Morera <yuhu@mmoreram.com>
  */
-declare( strict_types=1 );
+declare(strict_types=1);
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 use PHPUnit_Framework_TestCase;
 
@@ -1527,7 +1526,7 @@ use PHPUnit_Framework_TestCase;
  * @author Marc Morera <yuhu@mmoreram.com>
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 
@@ -1549,7 +1548,7 @@ use PHPUnit_Framework_TestCase;
 <?php
 
 // Comment
-declare( strict_types=1 ); // Comment
+declare(strict_types=1); // Comment
 // Comment
 
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
@@ -1568,7 +1567,7 @@ use PHPUnit_Framework_TestCase;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 // Comment
-declare( strict_types=1 ); // Comment
+declare(strict_types=1); // Comment
 // Comment
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 use PHPUnit_Framework_TestCase;
@@ -1581,7 +1580,7 @@ exports[`declare-6.php - php-verify: declare-6.php 1`] = `
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 use PHPUnit_Framework_TestCase;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 ); // Comment
+<?php declare(strict_types=1); // Comment
 // Comment
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 use PHPUnit_Framework_TestCase;
@@ -1596,7 +1595,7 @@ namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
 
 use PHPUnit_Framework_TestCase;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 ); // Comment
+<?php declare(strict_types=1); // Comment
 
 // Comment
 namespace Mmoreram\\PHPFormatter\\Tests\\Fixer;
@@ -1618,7 +1617,7 @@ exports[`declare-8.php - php-verify: declare-8.php 1`] = `
 
 namespace QueryBuilder\\QueryBuilders;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 );
+<?php declare(strict_types=1);
 /**
  * QueryBuilder for PHP
  *
@@ -1665,7 +1664,7 @@ declare(strict_types=1);
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-declare( strict_types=1 );
+declare(strict_types=1);
 
 `;
 
@@ -1706,7 +1705,7 @@ declare(strict_types=1);
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 `;
 
@@ -2020,7 +2019,7 @@ require_once 'PEAR.php';
 /**
  * Methods return this if they succeed
  */
-define( 'NET_SAMPLE_OK', 1 );
+define('NET_SAMPLE_OK', 1);
 
 // }}}
 // {{{ GLOBALS
@@ -2188,17 +2187,17 @@ class Net_Sample
      * @since Method available since Release 1.2.0
      * @deprecated Method deprecated in Release 2.0.0
      */
-    function setFoo( $arg1, $arg2 = 0 )
+    function setFoo($arg1, $arg2 = 0)
     {
         /*
          * This is a "Block Comment."  The format is the same as
          * Docblock Comments except there is only one asterisk at the
          * top.  phpDocumentor doesn't parse these.
          */
-        if ( $arg1 == 'good' || $arg1 == 'fair' ) {
+        if ($arg1 == 'good' || $arg1 == 'fair') {
             $this->foo = $arg1;
             return 1;
-        } elseif ( $arg1 == 'poor' && $arg2 > 1 ) {
+        } elseif ($arg1 == 'poor' && $arg2 > 1) {
             $this->foo = 'poor';
             return 2;
         } else {
@@ -2302,7 +2301,7 @@ class Foo
      *
      * @return void
      */
-    public function setTitle( $title )
+    public function setTitle($title)
     {
         // there should be no docblock here
         $this->title = $title;
@@ -2312,7 +2311,7 @@ class Foo
 /** @var \\Sqlite3 $sqlite */
 foreach ($connections as $sqlite) {
     // there should be no docblock here
-    $sqlite->open( '/my/database/path' );
+    $sqlite->open('/my/database/path');
 }
 
 /**
@@ -2331,7 +2330,7 @@ foreach ($connections as $sqlite) {
  *
  * @return string
  */
-function test( $parameter1, $e )
+function test($parameter1, $e)
 {
 }
 
@@ -2394,7 +2393,7 @@ echo // Comment
         $veryVeryVeryVeryVeryVeryVeryLongArg,
         $veryVeryVeryVeryVeryVeryVeryLongArg,
         $veryVeryVeryVeryVeryVeryVeryLongArg
-     );
+    );
 
 echo // Comment
     <<<EOD
@@ -2438,22 +2437,22 @@ function testFunction ($arg1, /* inline */ $arg2) {
 <?php
 class Test
 {
-    public function testFunction( /* inline */ $arg )
+    public function testFunction(/* inline */ $arg)
     {
         // body
     }
 
-    function testFunction( $arg1, /* inline */ $arg2 )
+    function testFunction($arg1, /* inline */ $arg2)
     {
     }
 }
 
-function testFunction( /* inline */ $arg )
+function testFunction(/* inline */ $arg)
 {
     // body
 }
 
-function testFunction( $arg1, /* inline */ $arg2 )
+function testFunction($arg1, /* inline */ $arg2)
 {
 }
 
@@ -2479,7 +2478,7 @@ if (
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-if ( empty( /* Comment */ [] /* Comment */ ) ) {
+if (empty(/* Comment */ [] /* Comment */)) {
     echo "Foo";
 }
 
@@ -2488,7 +2487,7 @@ if (
         // Comment
         $a
     )
- ) {
+) {
 }
 
 if (
@@ -2496,7 +2495,7 @@ if (
         // Comment
         $a
     )
- ) {
+) {
 }
 
 `;
@@ -2916,7 +2915,7 @@ class Foo extends Bar implements FooInterface
 <?php
 
 // Comment
-declare( strict_types=1 );
+declare(strict_types=1);
 // Comment
 
 // Comment
@@ -2942,16 +2941,16 @@ use const Vendor\\Package\\{ConstantA, ConstantB, ConstantC};
 class Foo extends Bar implements FooInterface
 {
     // Comment
-    public function sampleFunction( int $a, int $b = null ): array
+    public function sampleFunction(int $a, int $b = null): array
     {
         // Comment
-        if ( $a === $b ) {
+        if ($a === $b) {
             // Comment
             bar();
-        } elseif ( $a > $b ) {
-            $foo->bar( $arg1 );
+        } elseif ($a > $b) {
+            $foo->bar($arg1);
         } else {
-            BazClass::bar( $arg2, $arg3 );
+            BazClass::bar($arg2, $arg3);
         }
         // Comment
     }
@@ -3010,13 +3009,13 @@ function foo // this is a function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-function foo( /* 1 */ $a /* 2 */ = /* 3 */ 1 /* 4 */ )
+function foo(/* 1 */ $a /* 2 */ = /* 3 */ 1 /* 4 */)
 {
 }
-function foo( $a ): /* 5 */ ?string /* 6 */
+function foo($a): /* 5 */ ?string /* 6 */
 {
 }
-function foo( /* 1 */ $a /* 2 */ = /* 3 */ 1 /* 4 */ ): /* 5 */ ?string /* 6 */
+function foo(/* 1 */ $a /* 2 */ = /* 3 */ 1 /* 4 */): /* 5 */ ?string /* 6 */
 {
 }
 function emptyFn(/*Comment */)
@@ -3519,14 +3518,14 @@ if (/* Comment*/ $var /* Comment*/) /* Comment*/ {}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 // Comment 1
-if ( 1 ) {
+if (1) {
     // Comment 2
     // Comment 3
     echo "Foo"; // Comment 4
     // Comment 5
 }
 // Comment 6
-elseif ( 2 ) {
+elseif (2) {
     // Comment 7
     // Comment 8
     echo "Bar";
@@ -3540,57 +3539,57 @@ else {
     // Comment 13
 } // Comment 14
 
-if ( /* Comments */ true /* Comments */ ) {
-} elseif ( /* Comments */ false /* Comments */ ) {
+if (/* Comments */ true /* Comments */) {
+} elseif (/* Comments */ false /* Comments */) {
 } else {
 }
 
-if ( 2 /* MB_OVERLOAD_STRING */ & (int) ini_get( 'mbstring.func_overload' ) ) {
-    mb_internal_encoding( 'ASCII' );
+if (2 /* MB_OVERLOAD_STRING */ & (int) ini_get('mbstring.func_overload')) {
+    mb_internal_encoding('ASCII');
 }
 
 // this is a comment on an if
-if ( false ) {
+if (false) {
     do_nothing();
 }
 
 // and this is a comment on an elseif
-elseif ( false ) {
+elseif (false) {
     also_do_nothing();
 }
 
-if ( 1 ) {
+if (1) {
     // comment
     false;
 }
 // comment
-elseif ( 2 ) {
+elseif (2) {
     true;
 }
 // multi
 // ple
 // lines
-elseif ( 3 ) {
+elseif (3) {
     // existing comment
     true;
 }
 // okay?
-elseif ( 4 ) {
+elseif (4) {
     // empty with existing comment
 }
 // comment
 else {
 }
 
-if ( 5 ) {
+if (5) {
     // comment
     true;
 }
 
-if ( 6 ) {
+if (6) {
     // comment
     true;
-} elseif ( 7 ) {
+} elseif (7) {
     // comment
     true;
 }
@@ -3599,11 +3598,11 @@ else {
     true;
 }
 
-if ( 8 ) {
+if (8) {
     // comment
     // comment
     true;
-} elseif ( 9 ) {
+} elseif (9) {
     // comment
     // comment
     true;
@@ -3614,37 +3613,37 @@ else {
     true;
 }
 
-if ( 10 ) {
+if (10) {
     /* comment */ // comment
     true;
-} elseif ( 11 ) {
+} elseif (11) {
     /* comment */
     true;
-} elseif ( 12 ) {
+} elseif (12) {
     // comment /* comment */ // comment
     true;
-} elseif ( 13 ) {
+} elseif (13) {
     /* comment */ /* comment */ // comment
     true;
 } /* comment */ else {
     true;
 }
 
-if ( 14 ) {
+if (14) {
     // comment
     /* comment */
     // comment
     true;
-} elseif ( 15 ) {
+} elseif (15) {
     // comment
     /* comment */
     /* comment */ // comment
     true;
 }
 
-if ( $cond ) {
+if ($cond) {
     stuff();
-} /* comment */ elseif ( $cond ) {
+} /* comment */ elseif ($cond) {
     stuff();
 }
 // comment
@@ -3652,7 +3651,7 @@ else {
     stuff();
 }
 
-if ( $cond ) {
+if ($cond) {
     stuff();
 }
 // comment
@@ -3662,25 +3661,25 @@ else {
 
 function f()
 {
-    if ( $untrackedChoice === 0 ) {
+    if ($untrackedChoice === 0) {
         /* Cancel */ return null;
-    } elseif ( $untrackedChoice === 1 ) {
-        /* Add */ yield $repository->addAll( $args );
+    } elseif ($untrackedChoice === 1) {
+        /* Add */ yield $repository->addAll($args);
         $shouldAmend = true;
-    } elseif ( $untrackedChoice === 2 ) {
+    } elseif ($untrackedChoice === 2) {
         /* Allow Untracked */ $allowUntracked = true;
     }
 }
 
 function f()
 {
-    if ( $untrackedChoice === 0 ) {
+    if ($untrackedChoice === 0) {
         /* Cancel */
         null;
-    } elseif ( $untrackedChoice === 1 ) {
+    } elseif ($untrackedChoice === 1) {
         /* Add */
         $shouldAmend = true;
-    } elseif ( $untrackedChoice === 2 ) {
+    } elseif ($untrackedChoice === 2) {
         /* Allow Untracked */
         $allowUntracked = true;
     }
@@ -3688,13 +3687,13 @@ function f()
 
 function f()
 {
-    if ( $untrackedChoice === 0 ) {
+    if ($untrackedChoice === 0) {
         /* Cancel */ // Cancel
         null;
-    } elseif ( $untrackedChoice === 1 ) {
+    } elseif ($untrackedChoice === 1) {
         /* Add */ // Add
         $shouldAmend = true;
-    } elseif ( $untrackedChoice === 2 ) {
+    } elseif ($untrackedChoice === 2) {
         /* Allow Untracked */ // Allow Untracked
         $allowUntracked = true;
     }
@@ -3702,32 +3701,32 @@ function f()
 
 function f()
 {
-    if ( $untrackedChoice === 0 ) {
+    if ($untrackedChoice === 0) {
         /* Cancel */ return null;
-    } elseif ( $untrackedChoice === 1 ) {
-        /* Add */ yield $repository->addAll( $args );
+    } elseif ($untrackedChoice === 1) {
+        /* Add */ yield $repository->addAll($args);
         $shouldAmend = true;
-    } elseif ( $untrackedChoice === 2 ) {
+    } elseif ($untrackedChoice === 2) {
         /* Allow Untracked */ $allowUntracked = true;
     }
 }
 
 function f()
 {
-    if ( $untrackedChoice === 0 ) {
+    if ($untrackedChoice === 0) {
         /* Cancel */ return null;
-    } elseif ( $untrackedChoice === 1 ) {
-        /* Add */ yield $repository->addAll( $args );
+    } elseif ($untrackedChoice === 1) {
+        /* Add */ yield $repository->addAll($args);
         $shouldAmend = true;
-    } elseif ( $untrackedChoice === 2 ) {
+    } elseif ($untrackedChoice === 2) {
         /* Allow Untracked */ $allowUntracked = true;
     }
 }
 
-if ( true ) {
+if (true) {
     // Comment
     echo 'foo';
-} elseif ( false ) {
+} elseif (false) {
     // Comment
     echo 'bar';
 }
@@ -3736,10 +3735,10 @@ else {
     echo 'baz';
 }
 
-if ( true ) {
+if (true) {
     // Comment
     echo 'foo';
-} elseif ( false ) {
+} elseif (false) {
     // Comment
     echo 'bar';
 }
@@ -3751,41 +3750,41 @@ else {
 // If the values implements the Arrayable interface we can just call this
 // toArray method on the instances which will convert both models and
 // collections to their proper array form and we'll set the values.
-if ( $value instanceof Arrayable ) {
+if ($value instanceof Arrayable) {
     $relation = $value->toArray();
 }
 // If the value is null, we'll still go ahead and set it in this list of
 // attributes since null is used to represent empty relationships if
 // if it a has one or belongs to type relationships on the models.
-elseif ( is_null( $value ) ) {
+elseif (is_null($value)) {
     $relation = $value;
 }
 
 // Comment
-if ( true ) {
+if (true) {
     call();
 }
 // Comment
-elseif ( false ) {
-    call();
-}
-
-// Comment
-if ( true ) {
+elseif (false) {
     call();
 }
 
 // Comment
-elseif ( false ) {
+if (true) {
     call();
 }
 
 // Comment
-if ( true ) {
+elseif (false) {
+    call();
+}
+
+// Comment
+if (true) {
     call();
 }
 // Comment
-elseif ( false ) {
+elseif (false) {
     call();
 }
 // Comment
@@ -3794,27 +3793,12 @@ else {
 }
 
 // Comment
-if ( true ) {
+if (true) {
     call();
 }
 
 // Comment
-elseif ( false ) {
-    call();
-}
-
-// Comment
-else {
-    call();
-}
-
-// Comment
-if ( true ) {
-    call();
-}
-
-// Comment
-elseif ( false ) {
+elseif (false) {
     call();
 }
 
@@ -3823,17 +3807,24 @@ else {
     call();
 }
 
-if ( true ) {
+// Comment
+if (true) {
+    call();
+}
+
+// Comment
+elseif (false) {
+    call();
+}
+
+// Comment
+else {
+    call();
+}
+
+if (true) {
     echo 'test';
-} /* comment */ elseif ( false ) {
-    echo 'test';
-}
-// comment
-else {
-    echo 'test';
-}
-
-if ( true ) {
+} /* comment */ elseif (false) {
     echo 'test';
 }
 // comment
@@ -3841,26 +3832,34 @@ else {
     echo 'test';
 }
 
-if ( $code === 92 /* '\\' */ ) {
+if (true) {
+    echo 'test';
 }
-if ( $code === 92 /* '\\' */ /* '\\' */ ) {
+// comment
+else {
+    echo 'test';
 }
 
-if ( $code === 92 ) {
+if ($code === 92 /* '\\' */) {
+}
+if ($code === 92 /* '\\' */ /* '\\' */) {
+}
+
+if ($code === 92) {
     /* '\\' */
 }
-if ( $code === 92 ) {
+if ($code === 92) {
     /* '\\' */
 }
 
 if (
     1
     // Comment
- ) {
+) {
     $a;
 }
 
-if ( $var ) {
+if ($var) {
     // Comment
     $a = 1;
 }
@@ -3868,14 +3867,14 @@ if ( $var ) {
 if (
     // Comment
     $var
- ) {
+) {
     $a = 1;
 }
 
-if ( $var ) {
+if ($var) {
     // Comment
     $a = 1;
-} elseif ( $var ) {
+} elseif ($var) {
     // Comment
     $a = 2;
 }
@@ -3884,7 +3883,7 @@ else {
     $a = 3;
 }
 
-if ( /* Comment*/ $var /* Comment*/ ) {
+if (/* Comment*/ $var /* Comment*/) {
     /* Comment*/
 }
 
@@ -4081,7 +4080,7 @@ $a = 1;
 // Comment
 ?>></h1>
 
-<?php if ( $showRow ) {
+<?php if ($showRow) {
     echo $arguments['afterItems'];
     // escape ok
     ?>
@@ -4215,7 +4214,7 @@ if (
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-if ( isset( /* Comment */ $a[1] /* Comment */ ) ) {
+if (isset(/* Comment */ $a[1] /* Comment */)) {
     echo "Foo";
 }
 
@@ -4224,7 +4223,7 @@ if (
         // Comment
         $a
     )
- ) {
+) {
 }
 
 if (
@@ -4232,7 +4231,7 @@ if (
         // Comment
         $a
     )
- ) {
+) {
 }
 
 `;
@@ -4328,7 +4327,7 @@ class Foo
 {
     public function foo(
         /* 1 */ $a /* 2 */ = /* 3 */ 1 /* 4 */
-     ): /* 5 */ ?string /* 6 */ {
+    ): /* 5 */ ?string /* 6 */ {
     }
 
     public function emptyMethod(/* comments */)
@@ -4424,12 +4423,12 @@ namespace foo {
 // Comment
 namespace foo {
     // Comment
-    function bar( $a, $b )
+    function bar($a, $b)
     {
         return $a + $b;
     }
     // Comment
-    echo bar( 2, 3 );
+    echo bar(2, 3);
     // Comment
 }
 // Comment
@@ -4537,7 +4536,7 @@ class Foo
 {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 );
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the Monolog package.
@@ -4636,7 +4635,7 @@ namespace Monolog\\Handler;
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 );
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the Monolog package.
@@ -4674,7 +4673,7 @@ namespace Monolog\\Handler;
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<?php declare( strict_types=1 );
+<?php declare(strict_types=1);
 /*
  * This file is part of the Monolog package.
  *
@@ -5143,7 +5142,7 @@ $a = new class() {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 $a = new Foo(/*Comment*/);
-$a = new Foo( /* Comment */ 1 /*Comments*/ );
+$a = new Foo(/* Comment */ 1 /*Comments*/);
 $a = new Foo(); // Comment
 
 $a = new class {}; // Comment
@@ -5287,17 +5286,17 @@ $a = new class {
      * @since Method available since Release 1.2.0
      * @deprecated Method deprecated in Release 2.0.0
      */
-    function setFoo( $arg1, $arg2 = 0 )
+    function setFoo($arg1, $arg2 = 0)
     {
         /*
          * This is a "Block Comment."  The format is the same as
          * Docblock Comments except there is only one asterisk at the
          * top.  phpDocumentor doesn't parse these.
          */
-        if ( $arg1 == 'good' || $arg1 == 'fair' ) {
+        if ($arg1 == 'good' || $arg1 == 'fair') {
             $this->foo = $arg1;
             return 1;
-        } elseif ( $arg1 == 'poor' && $arg2 > 1 ) {
+        } elseif ($arg1 == 'poor' && $arg2 > 1) {
             $this->foo = 'poor';
             return 2;
         } else {
@@ -5393,10 +5392,10 @@ function bar(/* Comment */ &$a /* Comment */) {}
 function foo(
     /* Comment */ $a,
     /* Comment */ array /* Comment */ $b /* Comment */ = /* Comment */ [] /* Comment */
- ) {
+) {
 }
 
-function bar( /* Comment */ &$a /* Comment */ )
+function bar(/* Comment */ &$a /* Comment */)
 {
 }
 
@@ -5622,45 +5621,33 @@ $var = $a
 
 $inspect = $condition
     ? // node <= 0.8.x
-    function ( $v, $colors ) {
-        return $util->inspect( $v, 0, 0, $colors );
+    function ($v, $colors) {
+        return $util->inspect($v, 0, 0, $colors);
     }
     : // node > 0.8.x
-    function ( $v, $colors ) {
-        return $util->inspect( $v, ['colors' => colors] );
+    function ($v, $colors) {
+        return $util->inspect($v, ['colors' => colors]);
     };
 
 $extractTextPluginOptions = $shouldUseRelativeAssetPaths
     ? // Making sure that the publicPath goes back to to build folder.
-    [
-        'publicPath' => ( new Foo(
-            $cssFilename->split( '/' )->length
-         ) )->join( '../' )
-    ]
+    ['publicPath' => (new Foo($cssFilename->split('/')->length))->join('../')]
     : [];
 
 $extractTextPluginOptions = $shouldUseRelativeAssetPaths
     ? // Making sure that the publicPath goes back to to build folder.
-    [
-        'publicPath' => ( new Foo(
-            $cssFilename->split( "/" )->length
-         ) )->join( "../" )
-    ]
+    ['publicPath' => (new Foo($cssFilename->split("/")->length))->join("../")]
     : [];
 
 $extractTextPluginOptions = $shouldUseRelativeAssetPaths // Making sure that the publicPath goes back to to build folder.
-    ? [
-        'publicPath' => ( new Foo(
-            $cssFilename->split( "/" )->length
-         ) )->join( "../" )
-    ]
+    ? ['publicPath' => (new Foo($cssFilename->split("/")->length))->join("../")]
     : [];
 
 $var =
     $process->env->NODE_ENV ===
     "production" // a
-        ? call( "./configureProdStore" )
-        : call( "./configureDevStore" ); // b
+        ? call("./configureProdStore")
+        : call("./configureDevStore"); // b
 
 $var = $a
     ? // Comment
@@ -5889,7 +5876,7 @@ throw /* Comment */ new Foo() /* Comment */; // Comment
 <?php
 
 // Comment
-throw new ClassName(  // Comment
+throw new ClassName( // Comment
     1, // Comment
     // Comment
     2 // Comment
@@ -6171,7 +6158,7 @@ unset // Comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-unset( /* Comment */ $foo /* Comment */ );
+unset(/* Comment */ $foo /* Comment */);
 
 unset(
     // Comment
@@ -6402,7 +6389,7 @@ foo(.../*Comment*/$foo);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-foo( .../*Comment*/ $foo );
+foo(.../*Comment*/ $foo);
 
 `;
 

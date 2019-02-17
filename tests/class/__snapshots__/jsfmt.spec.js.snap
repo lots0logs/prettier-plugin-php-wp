@@ -272,7 +272,7 @@ $class = new class(
 <?php
 interface Logger
 {
-    public function log( string $msg );
+    public function log(string $msg);
 }
 
 class Application
@@ -284,7 +284,7 @@ class Application
         return $this->logger;
     }
 
-    public function setLogger( Logger $logger )
+    public function setLogger(Logger $logger)
     {
         $this->logger = $logger;
     }
@@ -293,7 +293,7 @@ class Application
 $app = new Application();
 $app->setLogger(
     new class implements Logger {
-        public function log( string $msg )
+        public function log(string $msg)
         {
             echo $msg;
         }
@@ -301,7 +301,7 @@ $app->setLogger(
 );
 $app->setLogger(
     new class {
-        public function log( $msg )
+        public function log($msg)
         {
             echo $msg;
         }
@@ -309,10 +309,10 @@ $app->setLogger(
 );
 
 var_dump(
-    new class( 10 ) extends SomeClass implements SomeInterface {
+    new class(10) extends SomeClass implements SomeInterface {
         private $num;
 
-        public function __construct( $num )
+        public function __construct($num)
         {
             $this->num = $num;
         }
@@ -333,10 +333,10 @@ class Outer
 
     public function func2()
     {
-        return new class( $this->prop ) extends Outer {
+        return new class($this->prop) extends Outer {
             private $prop3;
 
-            public function __construct( $prop )
+            public function __construct($prop)
             {
                 $this->prop3 = $prop;
             }
@@ -349,7 +349,7 @@ class Outer
     }
 }
 
-echo get_class( new class {} );
+echo get_class(new class {});
 $class = new class {};
 $class = new class extends Outer {};
 // Parenthesis on the same line
@@ -438,7 +438,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) {};
+) {};
 
 $class = new class(
     $arg,
@@ -449,7 +449,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) implements MyOtherClass {};
+) implements MyOtherClass {};
 
 $class = new class(
     $arg,
@@ -460,7 +460,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) implements MyOtherClass, MyOtherClass1, MyOtherClass2 {};
+) implements MyOtherClass, MyOtherClass1, MyOtherClass2 {};
 
 $class = new class(
     $arg,
@@ -471,7 +471,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) implements
+) implements
     VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyOtherClass
 {
 };
@@ -485,7 +485,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) implements
+) implements
     MyOtherClass,
     MyOtherClass,
     MyOtherOtherOtherClass,
@@ -502,7 +502,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends MyOtherClass {};
+) extends MyOtherClass {};
 
 $class = new class(
     $arg,
@@ -513,7 +513,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends
+) extends
     VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
 {
 };
@@ -527,7 +527,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends MyOtherClass implements MyI {};
+) extends MyOtherClass implements MyI {};
 
 $class = new class(
     $arg,
@@ -538,7 +538,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends MyOtherClass implements MyI, MyII, MyIII {};
+) extends MyOtherClass implements MyI, MyII, MyIII {};
 
 $class = new class(
     $arg,
@@ -549,7 +549,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends MyOtherClass implements
+) extends MyOtherClass implements
     VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
 {
 };
@@ -563,7 +563,7 @@ $class = new class(
     function () {
         return 1;
     }
- ) extends MyOtherClass implements
+) extends MyOtherClass implements
     MyInterface,
     MyOtherInterface,
     MyOtherOtherInterface
@@ -579,7 +579,7 @@ $class = new class(
     function () {
         return 1;
     }
- )
+)
     extends VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
     implements MyI
 {
@@ -594,7 +594,7 @@ $class = new class(
     function () {
         return 1;
     }
- )
+)
     extends VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
     implements
         MyI,
@@ -612,7 +612,7 @@ $class = new class(
     function () {
         return 1;
     }
- )
+)
     extends VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
     implements VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongMyClass
 {
@@ -958,9 +958,9 @@ abstract class ReallyReallyReallyLongClassName
      *
      * @return \\Some\\Test
      */
-    public function __construct( $test, $test_int = null, $test_string = 'hi' )
+    public function __construct($test, $test_int = null, $test_string = 'hi')
     {
-        parent::__construct( $test_int ?: 1 );
+        parent::__construct($test_int ?: 1);
         $this->other = $test_string;
         $this->current_version =
             $current_version ?: new Content_Version_Model();
@@ -971,17 +971,17 @@ abstract class ReallyReallyReallyLongClassName
         $test,
         $test_int,
         $test_string
-     ) {
-        $model = new self( $test, $test_int, $test_string );
+    ) {
+        $model = new self($test, $test_int, $test_string);
         $model = new self(
             $really_really_really_really_really_really_really_really_long_array,
             $test_int,
             $test_string
-         );
+        );
         return $model;
     }
 
-    public function test_pass_by_reference( &$test )
+    public function test_pass_by_reference(&$test)
     {
         $test + 1;
     }
@@ -989,7 +989,7 @@ abstract class ReallyReallyReallyLongClassName
     /**
      * This is a function
      */
-    private function hi( $input )
+    private function hi($input)
     {
         $test = 1;
 
@@ -1003,12 +1003,12 @@ abstract class ReallyReallyReallyLongClassName
     public function reallyReallyReallyReallyReallyReallyReallyLongMethodName(
         $input,
         $otherInput = 1
-     ) {
+    ) {
         return true;
     }
 
     // doc test
-    public static function testStaticFunction( $input )
+    public static function testStaticFunction($input)
     {
         return self::$staticTest[0];
     }
@@ -1025,7 +1025,7 @@ abstract class ReallyReallyReallyLongClassName
 
     abstract protected function zim();
 
-    public function method( iterable $iterable ): array
+    public function method(iterable $iterable): array
     {
         // Parameter broadened and return type narrowed.
     }
@@ -1045,14 +1045,14 @@ abstract class ReallyReallyReallyLongClassName
         return 'hi';
     }
 
-    public function testReturn( ?string $name ): ?string
+    public function testReturn(?string $name): ?string
     {
         return $name;
     }
 
-    public function swap( &$left, &$right ): void
+    public function swap(&$left, &$right): void
     {
-        if ( $left === $right ) {
+        if ($left === $right) {
             return;
         }
 
@@ -1061,7 +1061,7 @@ abstract class ReallyReallyReallyLongClassName
         $right = $tmp;
     }
 
-    public function test( object $obj ): object
+    public function test(object $obj): object
     {
         return new SplQueue();
     }
@@ -1070,7 +1070,7 @@ abstract class ReallyReallyReallyLongClassName
         string $foo,
         string $bar,
         int $baz
-     ): string {
+    ): string {
         return 'foo';
     }
 
@@ -1078,7 +1078,7 @@ abstract class ReallyReallyReallyLongClassName
         string $foo,
         string $bar,
         int $baz
-     ) {
+    ) {
         return 'foo';
     }
 
@@ -1095,8 +1095,8 @@ abstract class ReallyReallyReallyLongClassName
 
 $this->something->method(
     $argument,
-    $this->more->stuff( $this->even->more->things->complicatedMethod() )
- );
+    $this->more->stuff($this->even->more->things->complicatedMethod())
+);
 
 class A
 {
@@ -1123,7 +1123,7 @@ class FooBar
 
 class FooBarFoo
 {
-    public function fooBarBaz( $x, $y, $z, $foo, $bar )
+    public function fooBarBaz($x, $y, $z, $foo, $bar)
     {
         /* Comment */
     }
@@ -1202,17 +1202,17 @@ class Custom_Plugin_NotificationPlaceholderSource extends
 
 class field extends \\models\\base
 {
-    protected function pre_save( $input, $fields )
+    protected function pre_save($input, $fields)
     {
         $input['configs'] = json_encode(
             array_merge(
                 $configs,
                 $field_type->process_field_config_from_user(
                     $input['definition']
-                 )
-             )
-         );
-        unset( $input['definition'] );
+                )
+            )
+        );
+        unset($input['definition']);
     }
 }
 

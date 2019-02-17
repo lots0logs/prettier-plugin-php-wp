@@ -511,14 +511,14 @@ string'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
-$test = array( 1, 2, 3, 4, "test" );
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
+$test = array(1, 2, 3, 4, "test");
 $test = [1, 2, 3, 4, "test"];
 $test = [1, 2, 3, 4, "test"];
 $test = [1, 2, 3, 4, "test"];
@@ -528,9 +528,9 @@ $test = [1, 2, 3, 4, "test"];
 $test = [1, 2, 3, 4, "test"];
 $test = [1, 2, 3, 4, "test"];
 $other_test = [1, 2, 123.4324, $hi];
-$keyed_test = array( 'one' => 123, 'two' => $other );
-$keyed_test = array( 'one' => 123, 'two' => $other );
-$keyed_test = array( 'one' => 123, 'two' => $other );
+$keyed_test = array('one' => 123, 'two' => $other);
+$keyed_test = array('one' => 123, 'two' => $other);
+$keyed_test = array('one' => 123, 'two' => $other);
 $keyed_test = array(
     'one' => 123,
     'two' => $other
@@ -589,7 +589,7 @@ $array = array(
     1.5 => "c",
     true => "d"
 );
-$array = array( "a", "b", 6 => "c", "d" );
+$array = array("a", "b", 6 => "c", "d");
 $array = array(
     "foo" => "bar",
     42 => 24,
@@ -605,19 +605,19 @@ $arr[] = 56;
 $arr[] = 56;
 $arr[] = 56;
 $arr[] = 56;
-echo $arr[somefunc( $bar )];
-echo $arr[somefunc( $bar )];
-echo $arr[somefunc( $bar )];
-echo $arr[somefunc( $bar )];
-echo $arr[somefunc( $bar )];
-$a = array_fill_keys( array( 'foo', 5, 10, 'bar' ), 'banana' );
-$a = array_fill_keys( array( 'foo', 5, 10, 'bar' ), 'banana' );
-$a = array_fill_keys( ['foo', 5, 10, 'bar'], 'banana' );
-$a = array_fill_keys( ['foo', 5, 10, 'bar'], 'banana' );
+echo $arr[somefunc($bar)];
+echo $arr[somefunc($bar)];
+echo $arr[somefunc($bar)];
+echo $arr[somefunc($bar)];
+echo $arr[somefunc($bar)];
+$a = array_fill_keys(array('foo', 5, 10, 'bar'), 'banana');
+$a = array_fill_keys(array('foo', 5, 10, 'bar'), 'banana');
+$a = array_fill_keys(['foo', 5, 10, 'bar'], 'banana');
+$a = array_fill_keys(['foo', 5, 10, 'bar'], 'banana');
 $secondElement = getArray()[1];
-unset( $arr[5] );
+unset($arr[5]);
 $arr["x"] = 42;
-echo $arr[somefunc( $bar )];
+echo $arr[somefunc($bar)];
 $test = $array[foo];
 
 $this->long->expression->before->array->statesArray[
@@ -648,13 +648,13 @@ $data = [
 ];
 
 $arr = [
-    'niveisFederativos' => app( NiveisFederativosRepository::class )
-        ->allOrderBy( 'nome' )
-        ->pluck( 'nome', 'id' ),
+    'niveisFederativos' => app(NiveisFederativosRepository::class)
+        ->allOrderBy('nome')
+        ->pluck('nome', 'id'),
 
-    'tiposLeis' => app( TiposLeisRepository::class )
-        ->allOrderBy( 'nome' )
-        ->pluck( 'nome', 'id' )
+    'tiposLeis' => app(TiposLeisRepository::class)
+        ->allOrderBy('nome')
+        ->pluck('nome', 'id')
 ];
 [[$id1, $name1]] = $data;
 [[$id1], [$id2], [$id]] = $data;
@@ -683,7 +683,7 @@ $arr = [
 ];
 
 $singleLine = ['do' => ['collapse' => 'this']];
-$singleLine = array( 'do' => array( 'collapse' => 'this' ) );
+$singleLine = array('do' => array('collapse' => 'this'));
 
 $multiline = [
     'do' => [
@@ -706,8 +706,8 @@ $mixed = [
     ]
 ];
 
-$arr = array( $var );
-$arr = array( $var );
+$arr = array($var);
+$arr = array($var);
 $arr = [$var];
 $arr = [$var];
 $arr = [$foo => $bar];

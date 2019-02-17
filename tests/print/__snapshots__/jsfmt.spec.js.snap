@@ -208,11 +208,11 @@ print 1000000000 +
     1000000000 +
     1000000000 +
     1000000000;
-print 'foo' . ( $bar ? 2 : 1 );
+print 'foo' . ($bar ? 2 : 1);
 print $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable->veryVeryVeryVeryVeryVeryLongProperty;
 
-print str_replace( 'test', 'test', 'test' );
-print str_replace( 'test', 'test', 'test' );
+print str_replace('test', 'test', 'test');
+print str_replace('test', 'test', 'test');
 
 print 1;
 print 1;
@@ -224,10 +224,10 @@ print esc_html(
             'Hi there. Your recent order on %s has been completed. ' .
                 'Your order details are shown below for your reference:',
             'woocommerce'
-         ),
-        get_option( 'blogname' )
-     )
- );
+        ),
+        get_option('blogname')
+    )
+);
 
 print <<<NOW
 string
@@ -259,21 +259,21 @@ print $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
     ? $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
     : $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable;
 print $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
-    ? ( $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
+    ? ($veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
         ? $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
-        : $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable )
-    : ( $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
+        : $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable)
+    : ($veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
         ? $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
-        : $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable );
+        : $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable);
 
-print @call( $var );
+print @call($var);
 
-print call( $var );
+print call($var);
 print call(
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
- );
+);
 
 print [$var, $var, $var];
 print [
@@ -316,7 +316,7 @@ print new Foo(
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable
- );
+);
 print new class {};
 print new class {
     public function __toString()
@@ -325,8 +325,8 @@ print new class {
     }
 };
 
-print ( function () {
+print (function () {
     return "string";
-} )();
+})();
 
 `;

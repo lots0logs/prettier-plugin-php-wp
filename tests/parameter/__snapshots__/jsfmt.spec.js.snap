@@ -114,43 +114,43 @@ string', $c) {}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <?php
 
-function foo( $arg )
+function foo($arg)
 {
     return $arg;
 }
 
-function foo1( &$arg )
+function foo1(&$arg)
 {
     return $arg;
 }
 
-function makecoffee( $type = "cappuccino" )
+function makecoffee($type = "cappuccino")
 {
     return "Making a cup of $type.\\n";
 }
 
-function makecoffee1( $types = array( "cappuccino" ), $coffeeMaker = null )
+function makecoffee1($types = array("cappuccino"), $coffeeMaker = null)
 {
-    $device = is_null( $coffeeMaker ) ? "hands" : $coffeeMaker;
-    return "Making a cup of " . join( ", ", $types ) . " with $device.\\n";
+    $device = is_null($coffeeMaker) ? "hands" : $coffeeMaker;
+    return "Making a cup of " . join(", ", $types) . " with $device.\\n";
 }
 
-function f( C $c )
+function f(C $c)
 {
-    echo get_class( $c ) . "\\n";
+    echo get_class($c) . "\\n";
 }
 
-function f1( C $c = null )
+function f1(C $c = null)
 {
-    var_dump( $c );
+    var_dump($c);
 }
 
-function sum( int $a, int $b )
+function sum(int $a, int $b)
 {
     return $a + $b;
 }
 
-function sum1( ...$numbers )
+function sum1(...$numbers)
 {
     $acc = 0;
     foreach ($numbers as $n) {
@@ -159,7 +159,7 @@ function sum1( ...$numbers )
     return $acc;
 }
 
-function total_intervals( $unit, DateInterval ...$intervals )
+function total_intervals($unit, DateInterval ...$intervals)
 {
     $time = 0;
     foreach ($intervals as $interval) {
@@ -168,15 +168,15 @@ function total_intervals( $unit, DateInterval ...$intervals )
     return $time;
 }
 
-function testReturn( ?string $name ): ?string
+function testReturn(?string $name): ?string
 {
     return $name;
 }
 
 function intArg(
     int $c = 111111111111111111111111111111111111111111111111111111111111111111111111
- ) {
-    var_dump( $c );
+) {
+    var_dump($c);
 }
 
 function bar(
@@ -185,7 +185,7 @@ function bar(
         "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString",
         "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString"
     )
- ) {
+) {
     return $arg;
 }
 
@@ -207,7 +207,7 @@ function bar2(
         "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString" .
             "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString" .
             "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString"
- ) {
+) {
     return $arg;
 }
 
@@ -215,7 +215,7 @@ function bar3(
     $arg = "veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString"
         ? "1"
         : "2"
- ) {
+) {
     return $arg;
 }
 
@@ -223,7 +223,7 @@ function bar4(
     string $arg = "veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString"
         ? "1"
         : "2"
- ) {
+) {
     return $arg;
 }
 
@@ -233,7 +233,7 @@ function bar5(
         "veryVeryVeryVeryVeryVeryVeryVeryVeryLongString"
             ? "1"
             : "2"
- ) {
+) {
     return $arg;
 }
 

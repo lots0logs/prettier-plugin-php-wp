@@ -1515,7 +1515,7 @@ string
 string
 string
 EOD
- ) {
+) {
     echo 'test';
 }
 

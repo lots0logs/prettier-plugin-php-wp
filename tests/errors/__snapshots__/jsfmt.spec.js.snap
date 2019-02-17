@@ -79,9 +79,9 @@ try {
 
 throw new VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongClassException(
     'exception'
- );
+);
 throw $e;
-throw new \\Exception( 'Bad logic in order cancel' );
+throw new \\Exception('Bad logic in order cancel');
 
 try {
 } catch (Exception $e) {

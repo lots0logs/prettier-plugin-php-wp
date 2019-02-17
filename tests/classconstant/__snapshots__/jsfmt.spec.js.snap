@@ -62,7 +62,7 @@ class ConstDemo
         return self::TEST_CLASS_CONSTANT;
     }
 
-    public function f( $a = ONE + self::THREE )
+    public function f($a = ONE + self::THREE)
     {
         return $a;
     }

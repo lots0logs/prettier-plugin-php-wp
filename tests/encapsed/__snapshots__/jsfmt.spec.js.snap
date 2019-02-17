@@ -496,9 +496,9 @@ $var =
     };
 $var =
     $foo->bzr_{
-        ( function () {
+        (function () {
             return 1;
-        } )( $var )
+        })($var)
     };
 
 $var = "{$this->target->resource->binary}";
@@ -510,7 +510,7 @@ $var = "{$this->target->resource->binary} {$this->target->resource->binary->foo-
 $var = "{$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo} {$this->target->resource->binary}";
 $var = "{$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo} {$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo}";
 $var = "{$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo()} {$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo()}";
-$var = "My name is \${getName( $arg, 'string', 1024, $var ? true : false, [
+$var = "My name is \${getName($arg, 'string', 1024, $var ? true : false, [
     'foo' => 'bar',
     'bar' => 'foo'
 ])}";
@@ -518,17 +518,17 @@ $var = "My name is \${getName(
     $veryVeryVeryVeryVeryVeryVeryVeryVeryLongVar,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryLongVar,
     $veryVeryVeryVeryVeryVeryVeryVeryVeryLongVar
- )}";
+)}";
 
 $encapsHereDoc = <<<STR
  Hello World {$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo}
  Hello World {$this->target->resource->binary->foo->bar->foobar->bar->foo->foobar->bar->foo()}
 STR;
 
-$var = $this->swift->{'set'}( $address, $name );
-$var = $this->swift->{'set' . 'Offset'}( $address, $name );
-$var = $this->swift->{"set"}( $address, $name );
-$var = $this->swift->{"set{$type}"}( $address, $name );
+$var = $this->swift->{'set'}($address, $name);
+$var = $this->swift->{'set' . 'Offset'}($address, $name);
+$var = $this->swift->{"set"}($address, $name);
+$var = $this->swift->{"set{$type}"}($address, $name);
 
 $var = "string \${$var} string";
 $var = "string $var string";

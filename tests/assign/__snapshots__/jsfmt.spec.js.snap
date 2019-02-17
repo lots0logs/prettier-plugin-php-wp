@@ -156,12 +156,12 @@ $variable[
 ] = $variable->registered[1];
 
 $computedDescriptionLines =
-    ( $showConfirm && $descriptionLinesConfirming ) ||
-    ( $focused && !$loading && $descriptionLinesFocused ) ||
+    ($showConfirm && $descriptionLinesConfirming) ||
+    ($focused && !$loading && $descriptionLinesFocused) ||
     $descriptionLines;
 
 $computedDescriptionLines =
-    ( $focused && !$loading && $descriptionLinesFocused ) || $descriptionLines;
+    ($focused && !$loading && $descriptionLinesFocused) || $descriptionLines;
 
 [$bottom, $left, $right, $top] = $arr;
 [
@@ -207,11 +207,11 @@ $computedDescriptionLines =
 ];
 
 for ($i = 0, $len = $arr->length; $i < $len; $i++) {
-    call( $arr[$i] );
+    call($arr[$i]);
 }
 
 for ($i = 0, $len = $arr->length; $i < $len; $i++) {
-    call( $arr[$i] );
+    call($arr[$i]);
 }
 
 $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable = $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable;
@@ -219,15 +219,15 @@ $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongVariable = $veryVeryVeryVeryVer
 $obj->property = $obj->oneProperty = $obj->twoPeroperty = 0;
 $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = 0;
 $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = $obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = $veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongValue;
-$obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = ( new MyClass() )->call(
+$obj->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty->veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongProperty = (new MyClass())->call(
     $arg
- );
+);
 $obj->loooooooooooong->lookup = $this->getRequest()->getParam(
     'instance-resource-id'
- );
+);
 $obj->loooooooooooong->lookup = (int) $this->getRequest()->getParam(
     'instance-resource-id'
- );
+);
 
 $component =
     $var->insertReallyReallyReallyReallyReallyReallyReallyReallyLongName;
@@ -237,9 +237,9 @@ $component =
     Foo::$insertReallyReallyReallyReallyReallyReallyReallyReallyLongName;
 $component =
     $a::$insertReallyReallyReallyReallyReallyReallyReallyReallyLongName;
-$component = ( new Foo() )
+$component = (new Foo())
     ->insertReallyReallyReallyReallyReallyReallyReallyReallyLongName;
-$component = ( clone $a )
+$component = (clone $a)
     ->insertReallyReallyReallyReallyReallyReallyReallyReallyLongName;
 
 $component =
@@ -252,9 +252,9 @@ $component =
     Foo::$insertReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName;
 $component =
     $a::$insertReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName;
-$component = ( new Foo() )
+$component = (new Foo())
     ->insertReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName;
-$component = ( clone $a )
+$component = (clone $a)
     ->insertReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName;
 
 $component =

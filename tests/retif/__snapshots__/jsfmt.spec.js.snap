@@ -219,65 +219,65 @@ $test ?: doSomething();
 return $test ?: doSomething();
 
 $category_color =
-    get_field( Category_Meta::COLOR, 'category_' . $term_id ) ?: 'gold';
+    get_field(Category_Meta::COLOR, 'category_' . $term_id) ?: 'gold';
 
-$var = ( $someOtherReallyReallyLongVariable
-        ? ( $someOtherReallyReallyLongVariable
+$var = ($someOtherReallyReallyLongVariable
+        ? ($someOtherReallyReallyLongVariable
             ? $someOtherReallyReallyLongVariable
-            : $someOtherReallyReallyLongVariable )
-        : $someOtherReallyReallyLongVariable )
+            : $someOtherReallyReallyLongVariable)
+        : $someOtherReallyReallyLongVariable)
     ? $someOtherReallyReallyLongVariable
     : $someOtherReallyReallyLongVariable;
-$var = ( $someOtherReallyReallyLongVariable
-        ? ( $someOtherReallyReallyLongVariable
+$var = ($someOtherReallyReallyLongVariable
+        ? ($someOtherReallyReallyLongVariable
             ? $someOtherReallyReallyLongVariable
-            : $someOtherReallyReallyLongVariable )
-        : $someOtherReallyReallyLongVariable )
+            : $someOtherReallyReallyLongVariable)
+        : $someOtherReallyReallyLongVariable)
     ? $someOtherReallyReallyLongVariable
     : $someOtherReallyReallyLongVariable;
 $var = $someOtherReallyReallyLongVariable
-    ? ( $someOtherReallyReallyLongVariable
+    ? ($someOtherReallyReallyLongVariable
         ? $someOtherReallyReallyLongVariable
-        : $someOtherReallyReallyLongVariable )
-    : ( $someOtherReallyReallyLongVariable
+        : $someOtherReallyReallyLongVariable)
+    : ($someOtherReallyReallyLongVariable
         ? $someOtherReallyReallyLongVariable
-        : $someOtherReallyReallyLongVariable );
+        : $someOtherReallyReallyLongVariable);
 $test =
     $foo ?:
     bar(
         $someOtherReallyReallyLongVariable,
         $someOtherReallyReallyLongVariable,
         $someOtherReallyReallyLongVariable
-     );
+    );
 $test =
     $testReallyReallyReallyReallyReallyReallyLong >= 1 ?:
     $someOtherReallyReallyReallyReallyReallyReallyLongVariable;
-$test = $foo ?: bar( ['foo' => 'bar', 'bar' => 'foo'] );
+$test = $foo ?: bar(['foo' => 'bar', 'bar' => 'foo']);
 $test =
     $foo ?:
-    bar( [
+    bar([
         'foo' => $someOtherReallyReallyLongVariable,
         'bar' => $someOtherReallyReallyLongVariable
     ]);
 $var =
-    ( $this->databasePath ?:
-        $this->basePath . DIRECTORY_SEPARATOR . 'database' ) .
-    ( $path ? DIRECTORY_SEPARATOR . $path : $path );
+    ($this->databasePath ?:
+        $this->basePath . DIRECTORY_SEPARATOR . 'database') .
+    ($path ? DIRECTORY_SEPARATOR . $path : $path);
 $var =
-    ( $this->databasePath
+    ($this->databasePath
         ? $this->basePath . DIRECTORY_SEPARATOR . 'other'
-        : $this->basePath . DIRECTORY_SEPARATOR . 'database' ) .
-    ( $path ? DIRECTORY_SEPARATOR . $path : $path );
-return ( $this->databasePath ?:
-    $this->basePath . DIRECTORY_SEPARATOR . 'database' ) .
-    ( $path ? DIRECTORY_SEPARATOR . $path : $path );
+        : $this->basePath . DIRECTORY_SEPARATOR . 'database') .
+    ($path ? DIRECTORY_SEPARATOR . $path : $path);
+return ($this->databasePath ?:
+    $this->basePath . DIRECTORY_SEPARATOR . 'database') .
+    ($path ? DIRECTORY_SEPARATOR . $path : $path);
 
 $test = $foo
-    ? foo( [
+    ? foo([
         'foo' => $someOtherReallyReallyLongVariable,
         'bar' => $someOtherReallyReallyLongVariable
     ])
-    : bar( [
+    : bar([
         'foo' => $someOtherReallyReallyLongVariable,
         'bar' => $someOtherReallyReallyLongVariable
     ]);
@@ -299,40 +299,40 @@ $var = 1
         $someOtherReallyReallyLongVariable .
         $someOtherReallyReallyLongVariable;
 
-( $someOtherReallyReallyLongVariable
+($someOtherReallyReallyLongVariable
     ? $someOtherReallyReallyLongVariable
     : $someOtherReallyReallyLongVariable
- )->call();
-$var = $test ?: ( true ? 1 : 2 );
+)->call();
+$var = $test ?: (true ? 1 : 2);
 $var =
     $test ?:
-    ( $someOtherReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongVariable
+    ($someOtherReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongVariable
         ? 1
-        : 2 );
+        : 2);
 $var =
     $test ?:
-    ( true
+    (true
         ? $someOtherReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongVariable
-        : 2 );
+        : 2);
 $var =
     $test ?:
-    ( true
+    (true
         ? 1
-        : $someOtherReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongVariable );
+        : $someOtherReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongVariable);
 $var = $test
     ? 'string'
-    : ( $someOtherReallyReallyLongVariable
+    : ($someOtherReallyReallyLongVariable
         ? $someOtherReallyReallyLongVariable
-        : $someOtherReallyReallyLongVariable );
+        : $someOtherReallyReallyLongVariable);
 $var = $test
-    ? ( $someOtherReallyReallyLongVariable
+    ? ($someOtherReallyReallyLongVariable
         ? $someOtherReallyReallyLongVariable
-        : $someOtherReallyReallyLongVariable )
+        : $someOtherReallyReallyLongVariable)
     : 'string';
 
 $arr = [
     'step' =>
-        !empty( $field['sliderStep'] ) && $field['sliderStep']
+        !empty($field['sliderStep']) && $field['sliderStep']
             ? (int) $field['sliderStep']
             : 1,
     'step' => true ? (int) $field['sliderStep'] : 1,
@@ -379,55 +379,55 @@ $var =
     $var ?:
     'string';
 
-( $var ? 'string' : 'other-string' )();
-( $var ?: $var ?: $var ?: 'string' )();
+($var ? 'string' : 'other-string')();
+($var ?: $var ?: $var ?: 'string')();
 (
     $someOtherReallyReallyLongVariable ?:
     'VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString'
- )();
+)();
 (
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     'string'
- )();
-( $someOtherReallyReallyLongVariable
+)();
+($someOtherReallyReallyLongVariable
     ? $someOtherReallyReallyLongVariable
-    : $someOtherReallyReallyLongVariable )();
+    : $someOtherReallyReallyLongVariable)();
 
-( $var ? $var : $var )->call();
-( $var ?: $var ?: $var ?: 'string' )->call();
+($var ? $var : $var)->call();
+($var ?: $var ?: $var ?: 'string')->call();
 (
     $someOtherReallyReallyLongVariable ?:
     'VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString'
- )->call();
+)->call();
 (
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     'string'
- )->call();
-( $someOtherReallyReallyLongVariable
+)->call();
+($someOtherReallyReallyLongVariable
     ? $someOtherReallyReallyLongVariable
     : $someOtherReallyReallyLongVariable
- )->call();
+)->call();
 
-( $var ?: $var ?: $var ?: 'string' )->foo;
-( $var ? $var : $var )->foo;
+($var ?: $var ?: $var ?: 'string')->foo;
+($var ? $var : $var)->foo;
 (
     $someOtherReallyReallyLongVariable ?:
     'VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongString'
- )->foo;
+)->foo;
 (
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     'string'
- )->foo;
-( $someOtherReallyReallyLongVariable
+)->foo;
+($someOtherReallyReallyLongVariable
     ? $someOtherReallyReallyLongVariable
     : $someOtherReallyReallyLongVariable
- )->foo;
+)->foo;
 
 call(
     function () {
@@ -536,19 +536,19 @@ $var = include $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     'string';
 
-call( $var ? 'string' : 'other-string' );
-call( $var ?: $var ?: $var ?: 'string' );
+call($var ? 'string' : 'other-string');
+call($var ?: $var ?: $var ?: 'string');
 call(
     $someOtherReallyReallyLongVariable
         ? $someOtherReallyReallyLongVariable
         : $someOtherReallyReallyLongVariable
- );
+);
 call(
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     $someOtherReallyReallyLongVariable ?:
     'string'
- );
+);
 
 exit($var ? 'string' : 'other-string');
 exit($var ?: $var ?: $var ?: 'string');
@@ -625,13 +625,13 @@ $var =
     $delay instanceof DateTimeInterface
         ? $delay->getTimestamp()
         : Carbon::now()
-            ->addSeconds( $delay )
+            ->addSeconds($delay)
             ->getTimestamp();
 
 return $delay instanceof DateTimeInterface
     ? $delay->getTimestamp()
     : Carbon::now()
-        ->addSeconds( $delay )
+        ->addSeconds($delay)
         ->getTimestamp();
 
 $var = true

@@ -7,8 +7,6 @@ yarn
 yarn test
 ```
 
-
-
 Run `yarn prettier path/to/file.php` to format a single file.
 
 Here's what you need to know about the tests:

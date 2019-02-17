@@ -288,7 +288,7 @@ $bar->on(
     function () {
         doStuff();
     }
- );
+);
 
 foo(
     ['A, B'],
@@ -311,18 +311,18 @@ doAnotherThing(
     "node",
 
     [$solution_type, $time_frame]
- );
+);
 
 $stuff->doThing(
     $someStuff,
 
     -1,
     [
-        'accept' => function ( $node ) {
-            doSomething( $node );
+        'accept' => function ($node) {
+            doSomething($node);
         }
     ]
- );
+);
 
 doThing(
     $someOtherStuff,
@@ -330,11 +330,11 @@ doThing(
     // This is important
     true,
     [
-        'decline' => function ( $creditCard ) {
-            takeMoney( $creditCard );
+        'decline' => function ($creditCard) {
+            takeMoney($creditCard);
         }
     ]
- );
+);
 
 func(
     function () {
@@ -342,7 +342,7 @@ func(
     },
 
     ['yes' => true, 'no' => 5]
- );
+);
 
 doSomething(
     ['tomorrow' => $maybe, 'today' => $never[$always]],
@@ -494,57 +494,57 @@ $sel = $this->connections
 
 // App configuration.
 $fooBar
-    ->doSomething( 'Hello World' )
-    ->doAnotherThing( 'Foo', ['foo' => $bar] )
+    ->doSomething('Hello World')
+    ->doAnotherThing('Foo', ['foo' => $bar])
 
-    ->doOneMoreThing( $config )
+    ->doOneMoreThing($config)
 
-    ->run( function () {
-        $console->log( 'Bar' );
+    ->run(function () {
+        $console->log('Bar');
     });
 
 // Hello world
 // App configuration.
 $bigDeal
 
-    ->doSomething( 'Hello World' )
+    ->doSomething('Hello World')
 
-    ->doAnotherThing( 'Foo', ['foo' => $bar] )
+    ->doAnotherThing('Foo', ['foo' => $bar])
 
-    ->doOneMoreThing( $config )
+    ->doOneMoreThing($config)
 
-    ->run( function () {
-        $console->log( 'Bar' );
+    ->run(function () {
+        $console->log('Bar');
     });
 
 // Hello world
 $foo->bar->baz
 
-    ->doSomething( 'Hello World' )
+    ->doSomething('Hello World')
 
-    ->foo->bar->doAnotherThing( 'Foo', ['foo' => $bar] )
+    ->foo->bar->doAnotherThing('Foo', ['foo' => $bar])
 
-    ->doOneMoreThing( $config )
-    ->bar->run( function () {
-        $console->log( 'Bar' );
+    ->doOneMoreThing($config)
+    ->bar->run(function () {
+        $console->log('Bar');
     });
 
 // Hello world
 // Run this
-( $somethingGood ? $thisIsIt : $maybeNot )
+($somethingGood ? $thisIsIt : $maybeNot)
 
-    ->doSomething( 'Hello World' )
+    ->doSomething('Hello World')
 
-    ->doAnotherThing( 'Foo', ['foo' => $bar] )
-    ->run( function () {
-        $console->log( 'Bar' );
+    ->doAnotherThing('Foo', ['foo' => $bar])
+    ->run(function () {
+        $console->log('Bar');
     }); // Do this
 
 $helloWorld
 
     ->text()
 
-    ->then( function ( $t ) {
+    ->then(function ($t) {
         return $t;
     });
 
@@ -552,20 +552,20 @@ $helloWorld
     $veryLongVeryLongVeryLong ||
     $anotherVeryLongVeryLongVeryLong ||
     $veryVeryVeryLongError
- )
+)
 
-    ->map( function ( $tickets ) {
+    ->map(function ($tickets) {
         $TicketRecord->createFromSomeLongString();
     })
 
-    ->filter( function ( $obj ) {
+    ->filter(function ($obj) {
         return !!$obj;
     });
 
 $sel = $this->connections
 
-    ->concat( $this->activities->concat( $this->operators ) )
-    ->filter( function ( $x ) {
+    ->concat($this->activities->concat($this->operators))
+    ->filter(function ($x) {
         return $x->selected;
     });
 
