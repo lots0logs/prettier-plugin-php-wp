@@ -18,9 +18,9 @@ action "/rebase" {
   secrets = ["GITHUB_TOKEN"]
 }
 
-workflow "Code Lint" {
+workflow "Code Lint (Syntax)" {
   on = "push"
-  resolves = ["Print env"]
+  resolves = ["Lint PHP 5.2", "Lint PHP 5.6", "Lint PHP 7.3.0", "Lint JavaScript"]
 }
 
 action "Get Changed Files" {
@@ -28,8 +28,22 @@ action "Get Changed Files" {
   secrets = ["GITHUB_TOKEN"]
 }
 
-action "Print env" {
-  uses = "actions/bin/sh@master"
+action "Lint PHP 5.2" {
+  uses = "docker://elegantthemes/gh-action-lint-php:5.2.17"
   needs = ["Get Changed Files"]
-  args = ["find $HOME -name '*.json' -print -exec cat {} \\;"]
+}
+
+action "Lint PHP 5.6" {
+  uses = "docker://elegantthemes/gh-action-lint-php:5.6.39"
+  needs = ["Get Changed Files"]
+}
+
+action "Lint PHP 7.3.0" {
+  uses = "docker://elegantthemes/gh-action-lint-php:7.3.0"
+  needs = ["Get Changed Files"]
+}
+
+action "Lint JavaScript" {
+  uses = "docker://elegantthemes/gh-action-lint-js:latest"
+  needs = ["Get Changed Files"]
 }
